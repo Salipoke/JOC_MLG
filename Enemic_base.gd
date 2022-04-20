@@ -4,7 +4,8 @@ var health = 500
 var vel_base = 300
 var vel = Vector2.ZERO
 var damage = 50
-var p_position = 0 #player position
+const SPEED = 100
+var target = null
 
 func _physics_process(delta):
 	#Health
@@ -14,18 +15,10 @@ func _physics_process(delta):
 		pass
 	
 	#Velocity & Position
-	if 1 == 1: #la dada q tingui q sortir prq es mogui esquerra
-		vel = Vector2.LEFT * vel_base
-	elif 1 == 2:#dada dreta
-		vel = Vector2.RIGHT * vel_base
-	elif 1 == 3: #dada adalt
-		vel = Vector2.UP * vel_base
-	elif 1 == 2:#dada abaix
-		vel = Vector2.DOWN * vel_base
-	else:
-		vel = Vector2.ZERO
-	
-	vel = move_and_slide(vel, Vector2.UP)
-	
-	#Code
-	#var p_position = get_tree()
+	var velocity = global_position.direction_to(target.global_position)
+	move_and_collide(velocity * SPEED * delta)
+
+
+func _on_Area2D_body_entered(body):
+	if body.name == "charaborrar":
+		target = body
