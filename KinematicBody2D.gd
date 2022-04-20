@@ -17,8 +17,7 @@ func get_input():
 		velocity = Vector2(-speed, 0).rotated(rotation)
 	if Input.is_action_pressed("Puja"):
 		velocity = Vector2(speed, 0).rotated(rotation)
-	if Input.is_action_just_pressed("Dispara"):
-		
+	
 
 func _physics_process(delta):
 	get_input()
