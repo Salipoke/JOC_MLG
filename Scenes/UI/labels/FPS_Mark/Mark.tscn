@@ -1,0 +1,7 @@
+[gd_scene format=2]
+
+[node name="Mark" type="ColorRect"]
+margin_left = 719.0
+margin_top = 111.0
+margin_right = 722.0
+margin_bottom = 135.0
