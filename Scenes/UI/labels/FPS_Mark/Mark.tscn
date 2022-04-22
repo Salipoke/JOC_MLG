@@ -1,7 +1,8 @@
-[gd_scene format=2]
+[gd_scene load_steps=2 format=2]
 
-[node name="Mark" type="ColorRect"]
-margin_left = 719.0
-margin_top = 111.0
-margin_right = 722.0
-margin_bottom = 135.0
+[ext_resource path="res://Sprites/Options_labels/Mark.png" type="Texture" id=1]
+
+[node name="Mark" type="Sprite"]
+position = Vector2( 7, 45 )
+scale = Vector2( 0.240741, 0.162651 )
+texture = ExtResource( 1 )
