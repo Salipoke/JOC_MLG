@@ -33,7 +33,7 @@ margin_left = 714.0
 margin_top = 77.0
 margin_right = 892.0
 margin_bottom = 283.0
-text = "           FPS"
+text = "           FPS:60"
 script = ExtResource( 4 )
 
 [node name="Line" type="ColorRect" parent="."]
