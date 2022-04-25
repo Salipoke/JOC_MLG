@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Scripts/UI/Control/options_back.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/UI/labels/exit.gd" type="Script" id=1]
 [ext_resource path="res://Scripts/UI/label/Label_options.gd" type="Script" id=2]
 [ext_resource path="res://Scripts/UI/label/Label_continue.gd" type="Script" id=3]
 [ext_resource path="res://Scripts/UI/Control/from_menu_esc.gd" type="Script" id=4]
@@ -13,6 +13,8 @@ margin_left = 125.0
 margin_top = 44.0
 margin_right = 357.0
 margin_bottom = 211.0
+mouse_filter = 0
+mouse_default_cursor_shape = 2
 text = "11111111111111111111111111111
 1111111111111111111111111
 11111111111111111111111111
@@ -30,6 +32,8 @@ margin_left = 676.0
 margin_top = 81.0
 margin_right = 871.0
 margin_bottom = 197.0
+mouse_filter = 0
+mouse_default_cursor_shape = 2
 text = "222222222222222222222222
 222222222222222222222222
 222222222222222222222222
@@ -39,11 +43,14 @@ text = "222222222222222222222222
 222222222222222222222222"
 script = ExtResource( 2 )
 
-[node name="Label3" type="Label" parent="."]
-margin_left = 92.0
-margin_top = 337.0
-margin_right = 441.0
-margin_bottom = 486.0
+[node name="Label_exit" type="Label" parent="."]
+margin_left = 94.0
+margin_top = 356.0
+margin_right = 443.0
+margin_bottom = 416.0
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 2
 text = "3333333333333333333333333333333333333
 3333333333333333333333333333333333333333333
 333333333333"
