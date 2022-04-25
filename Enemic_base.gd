@@ -4,7 +4,6 @@ var health = 500
 var vel_base = 300
 var vel = Vector2.ZERO
 var damage = 50
-const SPEED = 100
 var target = null
 
 func _physics_process(delta):
@@ -15,10 +14,9 @@ func _physics_process(delta):
 		pass
 	
 	#Velocity & Position
-	var velocity = global_position.direction_to(target.global_position)
-	move_and_collide(velocity * SPEED * delta)
-
+	vel = position.direction_to(cborrar.position)
+#https://www.youtube.com/watch?v=O0rdD104Qsg
 
 func _on_Area2D_body_entered(body):
-	if body.name == "charaborrar":
+	if body.name == "cborrar":
 		target = body
