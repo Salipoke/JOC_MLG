@@ -8,3 +8,9 @@ position = Vector2( 0.34375, 0.34375 )
 scale = Vector2( 0.290761, 0.318452 )
 texture = ExtResource( 1 )
 script = ExtResource( 2 )
+
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+position = Vector2( 0.537383, 0.490655 )
+scale = Vector2( 0.171963, 0.157009 )
+
+[connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]
