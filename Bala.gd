@@ -1,8 +1,10 @@
-extends KinematicBody2D
+extends Sprite
 
-var velocitat = Vector2(0 , 0)
-var speed = 300
+var dir : Vector2
 
-func _physics_process(delta):
-	
-	var collision_info = move_and_collide(velocitat.normalized() * delta * speed)
+func fire(origin : Vector2, dest : Vector2):
+	dir = origin.direction_to(dest)
+
+func _process(delta):
+	if dir:
+		global_position += dir * delta * 350
