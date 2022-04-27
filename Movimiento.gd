@@ -27,11 +27,11 @@ func _physics_process(delta):
 
 func look_at_mouse():
 	var mouse_pos = get_global_mouse_position()
-	get_node("Apuntado").look_at(mouse_pos)
+	$Apuntado.look_at(mouse_pos)
 
 func _input(event):
 	if event.is_action_pressed("shoot"):
 		var dest_bullet_inst = dest_bullet_rec.instance()
-		dest_bullet_inst.fire($Balazo.global_position, get_global_mouse_position())
-		dest_bullet_inst.global_position = $Balazo.global_position
-		add_child(dest_bullet_inst)
+		dest_bullet_inst.fire($Apuntado/Balazo.global_position, get_global_mouse_position())
+		dest_bullet_inst.global_position = $Apuntado/Balazo.global_position
+		Global.Bales.add_child(dest_bullet_inst)
