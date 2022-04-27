@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Manel/Codes/Enemic_base.gd" type="Script" id=1]
-[ext_resource path="res://Assets/Among us horse.webp" type="Texture" id=2]
+[ext_resource path="res://Manel/Assets/Among us horse.webp" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -21,6 +21,7 @@ scale = Vector2( 0.08, 0.145985 )
 texture = ExtResource( 2 )
 
 [node name="Area2D" type="Area2D" parent="."]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource( 2 )
