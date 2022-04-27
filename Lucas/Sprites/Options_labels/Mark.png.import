@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Mark.png-572fa9c944ff3345bd6887e8319fee81.stex"
+path="res://.import/Mark.png-8bac450c9cf03eba0470b25995971621.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Options_labels/Mark.png"
-dest_files=[ "res://.import/Mark.png-572fa9c944ff3345bd6887e8319fee81.stex" ]
+source_file="res://Lucas/Sprites/Options_labels/Mark.png"
+dest_files=[ "res://.import/Mark.png-8bac450c9cf03eba0470b25995971621.stex" ]
 
 [params]
 

@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Scenes/UI/labels/exit.gd" type="Script" id=1]
-[ext_resource path="res://Scripts/UI/label/Label_options.gd" type="Script" id=2]
-[ext_resource path="res://Scripts/UI/label/Label_continue.gd" type="Script" id=3]
-[ext_resource path="res://Scripts/UI/Control/from_menu_esc.gd" type="Script" id=4]
+[ext_resource path="res://Lucas/Scenes/UI/labels/exit.gd" type="Script" id=1]
+[ext_resource path="res://Lucas/Scripts/UI/label/Label_options.gd" type="Script" id=2]
+[ext_resource path="res://Lucas/Scripts/UI/label/Label_continue.gd" type="Script" id=3]
+[ext_resource path="res://Lucas/Scripts/UI/Control/from_menu_esc.gd" type="Script" id=4]
 
 [node name="CanvasLayer" type="CanvasLayer"]
 script = ExtResource( 4 )
