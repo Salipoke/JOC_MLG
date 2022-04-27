@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/icon.png-487276ed1e3a0c39cad0279d744ee560.stex"
+path="res://.import/Among us horse.webp-a6a924c3fa2f72417a111fcd968d9847.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://icon.png"
-dest_files=[ "res://.import/icon.png-487276ed1e3a0c39cad0279d744ee560.stex" ]
+source_file="res://Manel/Assets/Among us horse.webp"
+dest_files=[ "res://.import/Among us horse.webp-a6a924c3fa2f72417a111fcd968d9847.stex" ]
 
 [params]
 
