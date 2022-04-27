@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Among us horse.webp-e669341d2945481e5c3c6727cfc2a9ae.stex"
+path="res://.import/bullet.jpg-5ec3f54ed374b0aa6770efd397c24ee6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Among us horse.webp"
-dest_files=[ "res://.import/Among us horse.webp-e669341d2945481e5c3c6727cfc2a9ae.stex" ]
+source_file="res://Manel/Assets/bullet.jpg"
+dest_files=[ "res://.import/bullet.jpg-5ec3f54ed374b0aa6770efd397c24ee6.stex" ]
 
 [params]
 
