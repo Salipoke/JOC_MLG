@@ -44,5 +44,4 @@ func fire():#https://godotengine.org/qa/81726/how-to-make-enemy-shoot-at-player
 
 func _on_Timer_timeout():
 	if player != null:
-		print('a')
 		fire()

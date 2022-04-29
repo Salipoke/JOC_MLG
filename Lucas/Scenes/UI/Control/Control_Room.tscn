@@ -14,7 +14,22 @@ script = ExtResource( 2 )
 margin_right = 107.0
 margin_bottom = 91.0
 
+<<<<<<< Updated upstream
 [node name="Icon" type="Sprite" parent="."]
 modulate = Color( 1, 0, 0, 1 )
 position = Vector2( 536, 297 )
 texture = ExtResource( 1 )
+=======
+[node name="Enemic_base" parent="." instance=ExtResource( 3 )]
+position = Vector2( 481, 324 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="."]
+position = Vector2( 556, 330 )
+
+[node name="Sprite" type="Sprite" parent="KinematicBody2D"]
+texture = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
+position = Vector2( -2, 0 )
+shape = SubResource( 1 )
+>>>>>>> Stashed changes
