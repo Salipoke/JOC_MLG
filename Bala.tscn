@@ -1,16 +1,27 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Images/Tank/Bullet.png" type="Texture" id=1]
 [ext_resource path="res://Bala.gd" type="Script" id=2]
 
-[node name="Bala" type="Sprite"]
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 5, 6 )
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource( 2 )
+
+[node name="Bala" type="Sprite" parent="."]
 rotation = 1.5708
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
-script = ExtResource( 2 )
 
 [node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
-position = Vector2( 0.537383, 0.490655 )
-scale = Vector2( 0.171963, 0.157009 )
+position = Vector2( -0.245328, 0.268691 )
+rotation = 1.5708
+scale = Vector2( 0.0859815, 0.0785045 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -0.2, 0 )
+scale = Vector2( 1, 0.95 )
+shape = SubResource( 1 )
 
 [connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]

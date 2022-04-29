@@ -1,8 +1,12 @@
 extends KinematicBody2D
 
 var dest_bullet_rec = preload("res://Bala.tscn")
+
+onready var fireDelayTimer := $FireDelayTimer
+
 export (int) var speed = 200
 export (float) var rotation_speed = 3
+export var fireDelay: float = 0.8
 
 var velocity = Vector2()
 var rotation_dir = 0
@@ -30,7 +34,8 @@ func look_at_mouse():
 	$Apuntado.look_at(mouse_pos)
 
 func _input(event):
-	if event.is_action_pressed("shoot"):
+	if Input.is_action_pressed("shoot") and fireDelayTimer.is_stopped():
+		fireDelayTimer.start(fireDelay)
 		var dest_bullet_inst = dest_bullet_rec.instance()
 		dest_bullet_inst.fire($Apuntado/Balazo.global_position, get_global_mouse_position())
 		dest_bullet_inst.global_position = $Apuntado/Balazo.global_position

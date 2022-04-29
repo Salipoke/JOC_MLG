@@ -1,4 +1,4 @@
-extends Sprite
+extends Area2D
 
 var dir : Vector2
 

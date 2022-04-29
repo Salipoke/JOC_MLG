@@ -32,3 +32,6 @@ texture = ExtResource( 3 )
 position = Vector2( 39.997, 0.48868 )
 rotation = 0.0122173
 scale = Vector2( 1.25, 1.25 )
+
+[node name="FireDelayTimer" type="Timer" parent="."]
+one_shot = true
