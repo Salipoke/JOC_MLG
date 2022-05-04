@@ -11,24 +11,22 @@ config_version=4
 [application]
 
 config/name="Joc Final MLG"
-
 config/icon="res://icon.png"
 
-<<<<<<< Updated upstream
-=======
 [autoload]
 
 Global="*res://global.gd"
->>>>>>> Stashed changes
 
 [display]
 
+window/vsync/use_vsync=false
 window/stretch/aspect="expand"
 
 [global]
 
 res=false
 resolution=false
+reso=false
 
 [input]
 
