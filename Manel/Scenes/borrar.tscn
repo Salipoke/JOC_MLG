@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://Manel/Assets/icon.png" type="Texture" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=1]
 [ext_resource path="res://Manel/Codes/borrar.gd" type="Script" id=2]
 [ext_resource path="res://Manel/Scenes/Enemies/Enemic_base.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Manel/Scenes/Bullets/Bullet_base.tscn" type="PackedScene" id=4]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 49.0918
@@ -11,6 +12,7 @@ radius = 49.0918
 
 [node name="Enemic_base" parent="." instance=ExtResource( 3 )]
 position = Vector2( 141, 245 )
+BULLET_SCENE = ExtResource( 4 )
 
 [node name="KinematicBody2D" type="KinematicBody2D" parent="."]
 position = Vector2( 539, 249 )
