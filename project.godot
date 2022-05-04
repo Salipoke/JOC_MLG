@@ -13,6 +13,10 @@ config_version=4
 config/name="Joc Final MLG"
 config/icon="res://icon.png"
 
+[autoload]
+
+Global="*res://global.gd"
+
 [display]
 
 window/vsync/use_vsync=false
