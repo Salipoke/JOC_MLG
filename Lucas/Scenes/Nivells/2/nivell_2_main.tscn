@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Lucas/Scenes/Nivells/obj/ext_walls.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Lucas/Scenes/Nivells/obj/small_3.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Lucas/Scenes/Nivells/obj/small_2.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Lucas/Scenes/Nivells/obj/small_1.tscn" type="PackedScene" id=4]
+[ext_resource path="res://icon.png" type="Texture" id=5]
 
 [node name="Node2D" type="Node2D"]
 
@@ -19,7 +21,31 @@ position = Vector2( 150, 525 )
 rotation = 1.5708
 
 [node name="wall3" parent="walls" instance=ExtResource( 2 )]
-position = Vector2( 292, 83 )
+position = Vector2( 290, 90 )
 
 [node name="wall4" parent="walls" instance=ExtResource( 3 )]
-position = Vector2( 292, 128 )
+position = Vector2( 290, 150 )
+rotation = 1.5708
+
+[node name="wall5" parent="walls" instance=ExtResource( 4 )]
+position = Vector2( 355, 389 )
+rotation = 1.5708
+
+[node name="wall6" parent="walls" instance=ExtResource( 3 )]
+position = Vector2( 787.84, 535.567 )
+rotation = 1.5708
+scale = Vector2( 0.859375, 0.828125 )
+
+[node name="wall7" parent="walls" instance=ExtResource( 2 )]
+position = Vector2( 900, 351 )
+
+[node name="wall8" parent="walls" instance=ExtResource( 2 )]
+position = Vector2( 598, 126 )
+rotation = 1.5708
+
+[node name="wall9" parent="walls" instance=ExtResource( 3 )]
+position = Vector2( 831, 151 )
+
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 0.828125, 0.859375 )
+texture = ExtResource( 5 )

@@ -6,6 +6,7 @@
 [ext_resource path="res://Lucas/Scenes/Nivells/obj/small_3.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Lucas/Scenes/Nivells/obj/big.tscn" type="PackedScene" id=5]
 
+
 [node name="Node2D" type="Node2D"]
 
 [node name="Sprite" type="Sprite" parent="."]
