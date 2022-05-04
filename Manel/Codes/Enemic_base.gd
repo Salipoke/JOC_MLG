@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-onready var BULLET_SCENE = preload("res://Manel/Scenes/Bullets/Bullet_base.tscn")
+onready var BULLET_SCENE = preload("res://Manel/Scenes/Bullet_base.tscn")
 
 var health = 500
 var vel = 2
@@ -44,4 +44,5 @@ func fire():#https://godotengine.org/qa/81726/how-to-make-enemy-shoot-at-player
 
 func _on_Timer_timeout():
 	if player != null:
+		print('a')
 		fire()
