@@ -13,7 +13,6 @@ export var mode = 0
 var velocity = Vector2()
 var rotation_dir = 0
 
-
 func Movement(delta):
 	rotation_dir = 0
 	velocity = Vector2()
