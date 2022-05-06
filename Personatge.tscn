@@ -34,5 +34,10 @@ position = Vector2( 39.997, 0.48868 )
 rotation = 0.0122173
 scale = Vector2( 1.25, 1.25 )
 
+[node name="Multiple" type="Sprite" parent="Apuntado"]
+position = Vector2( 40, 0 )
+
+[node name="Bigbullet" type="Sprite" parent="Apuntado"]
+
 [node name="FireDelayTimer" type="Timer" parent="."]
 one_shot = true
