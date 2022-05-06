@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Images/Tank/Tank.png" type="Texture" id=1]
 [ext_resource path="res://Movimiento.gd" type="Script" id=2]
-[ext_resource path="res://Images/Tank/GunTurret.png" type="Texture" id=3]
+[ext_resource path="res://Images/Personales/Tank/Apuntado.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 31, 30.5 )
@@ -10,13 +10,11 @@ extents = Vector2( 31, 30.5 )
 [node name="Movimiento" type="KinematicBody2D"]
 position = Vector2( 30, 30 )
 script = ExtResource( 2 )
-mode = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 0.0899069, 0.187288 )
 rotation = 4.71239
 scale = Vector2( 0.340374, 0.330425 )
 texture = ExtResource( 1 )
@@ -25,9 +23,8 @@ texture = ExtResource( 1 )
 scale = Vector2( 0.8, 0.8 )
 
 [node name="Sprite" type="Sprite" parent="Apuntado"]
-position = Vector2( 13, 0 )
+position = Vector2( 22.5, 0 )
 rotation = 1.5708
-scale = Vector2( 0.382353, 0.335821 )
 texture = ExtResource( 3 )
 
 [node name="Balazo" type="Sprite" parent="Apuntado"]
