@@ -19,15 +19,22 @@ position = Vector2( 512, 290 )
 rotation = 1.5708
 
 [node name="wall3" parent="walls" instance=ExtResource( 4 )]
-position = Vector2( 788, 291 )
+position = Vector2( 715, 293 )
 
 [node name="wall4" parent="walls" instance=ExtResource( 4 )]
-position = Vector2( 130, 325 )
+position = Vector2( 130, 210 )
 rotation = 1.5708
 
 [node name="wall5" parent="walls" instance=ExtResource( 4 )]
-position = Vector2( 788, 454 )
+position = Vector2( 789, 463 )
 
 [node name="wall6" parent="walls" instance=ExtResource( 4 )]
-position = Vector2( 305, 325 )
+position = Vector2( 311, 416 )
 rotation = 1.5708
+
+[node name="wall7" parent="walls" instance=ExtResource( 4 )]
+position = Vector2( 130, 360 )
+rotation = 1.5708
+
+[node name="wall8" parent="walls" instance=ExtResource( 4 )]
+position = Vector2( 865, 293 )
