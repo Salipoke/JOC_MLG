@@ -18,3 +18,4 @@ func _process(delta):
 		direccio.y = 1
 
 	position += direccio * velocitat * delta
+

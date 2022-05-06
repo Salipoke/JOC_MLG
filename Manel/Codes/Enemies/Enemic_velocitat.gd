@@ -1,10 +1,9 @@
 extends KinematicBody2D
 
-
-export var BULLET_SCENE : PackedScene
+onready var BULLET_SCENE = preload("res://Manel/Scenes/Bullets/Bullet_velocitat.tscn")
 
 var health = 500
-var vel = 2
+var vel = 4
 var move = Vector2.ZERO
 var damage = 50
 var player = null
@@ -33,7 +32,7 @@ func _physics_process(delta):
 #https://www.youtube.com/watch?v=O0rdD104Qsg
 
 func _on_Area2D_body_entered(body):
-	if body.name != self.name: #si no funciona amb multiples enemics, buscar el nom del jugador fent q entri en una area i fer print(body), posteriorment possar if body.name == "nom_conseguit":
+	if body.name == "jugateur": #quan s'agunti tot es té que canviar al nom del jugador
 		player = body
 
 func fire():#https://godotengine.org/qa/81726/how-to-make-enemy-shoot-at-player
@@ -45,5 +44,4 @@ func fire():#https://godotengine.org/qa/81726/how-to-make-enemy-shoot-at-player
 
 func _on_Timer_timeout():
 	if player != null:
-		print('a')
 		fire()
