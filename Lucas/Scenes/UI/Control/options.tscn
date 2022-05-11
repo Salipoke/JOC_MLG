@@ -33,10 +33,21 @@ margin_left = 714.0
 margin_top = 77.0
 margin_right = 892.0
 margin_bottom = 283.0
-text = "           FPS:60"
+mouse_default_cursor_shape = 6
+text = "           Vsync"
 script = ExtResource( 4 )
 
+[node name="HScrollBar" type="HScrollBar" parent="FPS"]
+margin_left = -16.0
+margin_top = 56.0
+margin_right = 162.0
+margin_bottom = 74.0
+max_value = 120.0
+step = 10.0
+custom_step = 10.0
+
 [node name="Line" type="ColorRect" parent="."]
+visible = false
 margin_left = 718.0
 margin_top = 119.0
 margin_right = 888.0
@@ -44,5 +55,9 @@ margin_bottom = 125.0
 script = SubResource( 1 )
 
 [node name="Mark" parent="." instance=ExtResource( 5 )]
+visible = false
 position = Vector2( 721, 122 )
 script = ExtResource( 7 )
+
+[connection signal="changed" from="FPS/HScrollBar" to="FPS" method="_on_HScrollBar_changed"]
+[connection signal="scrolling" from="FPS/HScrollBar" to="FPS" method="_on_HScrollBar_scrolling"]
