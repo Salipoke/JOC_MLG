@@ -1,4 +1,4 @@
-extends Area2D
+extends KinematicBody2D
 
 var move = Vector2.ZERO
 var look_player = Vector2.ZERO
@@ -13,7 +13,8 @@ func _physics_process(delta):
 	
 	move = move.move_toward(look_player, delta)
 	move = move.normalized() * vel
-	position += move
+	position.y += -cos(move.y)
+	position.x += move.x
 
 func _on_Visibility_R_screen_exited():
 	queue_free()

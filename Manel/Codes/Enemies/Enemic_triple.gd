@@ -1,6 +1,8 @@
 extends KinematicBody2D
 
-onready var BULLET_SCENE = preload("res://Manel/Scenes/Bullets/Bullet_triple.tscn")
+onready var BULLET_SCENE = preload("res://Manel/Scenes/Bullets/Bullet_triple_r.tscn")
+onready var BULLET_UP_SCENE = preload("res://Manel/Scenes/Bullets/Bullet_triple_adalt.tscn")
+onready var BULLET_DOWN_SCENE = preload("res://Manel/Scenes/Bullets/Bullet_tripe_abaix.tscn")
 
 var health = 500
 var vel = 2
@@ -36,10 +38,21 @@ func _on_Area2D_body_entered(body):
 		player = body
 
 func fire():#https://godotengine.org/qa/81726/how-to-make-enemy-shoot-at-player
+	#Normal
 	var bullet = BULLET_SCENE.instance()
 	bullet.position = get_global_position()
 	bullet.player = player
 	get_parent().add_child(bullet)
+	#Adalt
+	var bullet_adalt = BULLET_UP_SCENE.instance()
+	bullet_adalt.position = get_global_position()
+	bullet_adalt.player = player
+	get_parent().add_child(bullet_adalt)
+	#Abaix
+	var bullet_abaix = BULLET_DOWN_SCENE.instance()
+	bullet_abaix.position = get_global_position()
+	bullet_abaix.player = player
+	get_parent().add_child(bullet_abaix)
 	$Timer.set_wait_time(1)
 
 func _on_Timer_timeout():
