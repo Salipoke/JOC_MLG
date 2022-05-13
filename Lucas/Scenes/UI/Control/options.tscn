@@ -1,19 +1,25 @@
 [gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://icon.png" type="Texture" id=1]
-[ext_resource path="res://Lucas/Scripts/UI/Control/options_back.gd" type="Script" id=2]
 [ext_resource path="res://Lucas/Scripts/UI/label/Resolution.gd" type="Script" id=3]
 [ext_resource path="res://Lucas/Scripts/UI/label/FPS.gd" type="Script" id=4]
 [ext_resource path="res://Lucas/Scenes/UI/labels/FPS_Mark/Mark.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Lucas/Scripts/UI/test_scr/Sprite_move.gd" type="Script" id=6]
 [ext_resource path="res://Lucas/Sprites/Options_labels/Mark.gd" type="Script" id=7]
 
+[sub_resource type="GDScript" id=2]
+script/source = "extends Node
+#DESDE LA PESTANYA D'OPCIONS, SI PREMS ESC, VA AL MENU
+
+
+"
+
 [sub_resource type="GDScript" id=1]
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-script = ExtResource( 2 )
+script = SubResource( 2 )
 
 [node name="Icon" type="Sprite" parent="."]
 position = Vector2( 512, 307 )

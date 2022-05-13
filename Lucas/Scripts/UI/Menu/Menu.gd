@@ -12,7 +12,7 @@ func _ready():
 
 
 func _on_StartButton_pressed():
-#	get_tree().change_scene('') #Escena que decideix el estil de mapa i el mapa
+	get_tree().change_scene('res://Lucas/Scenes/Nivells/level_selector/level_sel_screen.tscn') #Escena que decideix el estil de mapa i el mapa
 	print('start')
 
 

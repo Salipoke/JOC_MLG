@@ -9,7 +9,23 @@ anchor_bottom = 1.0
 [node name="Label" type="Label" parent="."]
 margin_left = 419.0
 margin_top = 254.0
-margin_right = 514.0
-margin_bottom = 303.0
-text = "Bruh"
+margin_right = 548.0
+margin_bottom = 268.0
+autowrap = true
+uppercase = true
 script = ExtResource( 1 )
+
+[node name="Timer" type="Timer" parent="Label"]
+wait_time = 4.0
+autostart = true
+
+[node name="Timer2" type="Timer" parent="Label"]
+wait_time = 0.1
+autostart = true
+
+[node name="Timer3" type="Timer" parent="Label"]
+wait_time = 0.1
+
+[connection signal="timeout" from="Label/Timer" to="Label" method="_on_Timer_timeout"]
+[connection signal="timeout" from="Label/Timer2" to="Label" method="_on_Timer2_timeout"]
+[connection signal="timeout" from="Label/Timer3" to="Label" method="_on_Timer3_timeout"]
