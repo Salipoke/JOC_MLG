@@ -19,21 +19,35 @@ func _ready():
 		var lvl_i_boss = ('res://Lucas/Scenes/boss_{i}/nivell_boss_{i}_main.tscn')
 		var actual_string = lvl_i_boss.format({"i": i})
 		boss_lvl.append(actual_string)
-#	print (lvl,boss_lvl,'\n\n')
 	randomize()
 	lvl.shuffle()
-	print(lvl)
+#	print(lvl)
 
 func _input(event:InputEvent):
 	if event is InputEventKey and event.is_action_pressed("ui_home"):
-			get_tree().change_scene("res://start.tscn")
+		if Global.level_counter_for_boss == 5 or Global.level_counter_for_boss == 10 or Global.level_counter_for_boss == 15:
+			Global.boss_lvl_check += 1
+			print(Global.boss_lvl_check)
+			print (boss_lvl[Global.boss_lvl_check])
+			get_tree().change_scene(boss_lvl[Global.boss_lvl_check])
+		else:
+			Global.level_counter_for_boss += 1
+	#		print(Global.level_counter_for_boss)
+			get_tree().change_scene(lvl[0])
 
 
 func _on_Timer_timeout():
 	if check_timer == false:
 		check_timer = true
 	else:
-		get_tree().change_scene(lvl[0])
+		if Global.level_counter_for_boss == 5 or Global.level_counter_for_boss == 10 or Global.level_counter_for_boss == 15:
+			print (boss_lvl[Global.boss_lvl_check])
+			Global.boss_lvl_check += 1
+			get_tree().change_scene(boss_lvl[Global.boss_lvl_check])
+		else:
+			Global.level_counter_for_boss += 1
+			print(Global.level_counter_for_boss)
+			get_tree().change_scene(lvl[0])
 
 
 func _on_Timer2_timeout():

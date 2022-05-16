@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Lucas/Scripts/UI/level_selector/level_sel.gd" type="Script" id=1]
 
-[node name="Control" type="Control"]
+[node name="level_sel" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 
