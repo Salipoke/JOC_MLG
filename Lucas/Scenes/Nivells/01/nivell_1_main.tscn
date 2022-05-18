@@ -11,6 +11,7 @@
 script = ExtResource( 6 )
 
 [node name="Sprite" parent="." instance=ExtResource( 2 )]
+position = Vector2( 31, 30 )
 
 [node name="ext_walls" parent="." instance=ExtResource( 1 )]
 
