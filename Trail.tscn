@@ -3,11 +3,11 @@
 [ext_resource path="res://Trail.gd" type="Script" id=1]
 
 [sub_resource type="Gradient" id=1]
-offsets = PoolRealArray( 0.237569, 0.861878 )
-colors = PoolColorArray( 0.972549, 0.972549, 0.972549, 0, 1, 1, 1, 1 )
+colors = PoolColorArray( 0, 0, 0, 0, 0.983425, 0.983425, 0.983425, 1 )
 
 [node name="Trail" type="Line2D"]
 z_index = -1
+default_color = Color( 0.4, 0.501961, 1, 1 )
 gradient = SubResource( 1 )
 script = ExtResource( 1 )
 trailLength = 20
