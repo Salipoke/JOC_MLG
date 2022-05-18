@@ -24,7 +24,8 @@ func fire():#https://godotengine.org/qa/81726/how-to-make-enemy-shoot-at-player
 	#Target
 	target.position = player.position
 	get_parent().add_child(target)
-	$Target.set_wait_time(2)
+	$Target.set_wait_time(90)
+	#yield()
 	#Bullet
 	bullet.position = get_global_position()
 	bullet.player = player
@@ -36,4 +37,4 @@ func _on_Timer_timeout():
 		fire()
 
 func _on_Target_timeout():
-	target.position.y = 999
+	TARGET.timer = true
