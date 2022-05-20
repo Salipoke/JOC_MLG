@@ -19,7 +19,7 @@ position = Vector2( -0.5, 307 )
 shape = SubResource( 1 )
 
 [node name="down_exterior_wall" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2( 506.001, 600.619 )
+position = Vector2( 494.001, 600.619 )
 shape = SubResource( 2 )
 
 [node name="up_exterior_wall" type="CollisionShape2D" parent="StaticBody2D"]
