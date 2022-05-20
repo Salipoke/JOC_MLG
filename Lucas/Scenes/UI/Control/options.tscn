@@ -50,7 +50,7 @@ margin_right = 172.0
 margin_bottom = 54.0
 mouse_filter = 1
 max_value = 120.0
-step = 10.0
+step = 5.0
 custom_step = 10.0
 
 [node name="Line" type="ColorRect" parent="."]
