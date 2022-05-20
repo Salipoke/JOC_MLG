@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Apuntado.png-76303625523e62cb58efdebe91b1fb7d.stex"
+path="res://.import/Apuntado.png-b9ede70d06369916cb4ab73a9702ec9b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Images/Personales/Tank/Apuntado.png"
-dest_files=[ "res://.import/Apuntado.png-76303625523e62cb58efdebe91b1fb7d.stex" ]
+source_file="res://Guillem/Images/Personales/Tank/Apuntado.png"
+dest_files=[ "res://.import/Apuntado.png-b9ede70d06369916cb4ab73a9702ec9b.stex" ]
 
 [params]
 
