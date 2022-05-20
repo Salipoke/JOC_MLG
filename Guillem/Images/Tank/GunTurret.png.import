@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/GunTurret.png-e7708e8d334870891e0d70bc668ee066.stex"
+path="res://.import/GunTurret.png-1a76b95812750498f16f93c3c53ca74b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Images/Tank/GunTurret.png"
-dest_files=[ "res://.import/GunTurret.png-e7708e8d334870891e0d70bc668ee066.stex" ]
+source_file="res://Guillem/Images/Tank/GunTurret.png"
+dest_files=[ "res://.import/GunTurret.png-1a76b95812750498f16f93c3c53ca74b.stex" ]
 
 [params]
 
