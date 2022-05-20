@@ -7,7 +7,7 @@ var x = -1
 var check_timer = false
 var level_selected_animation = true
 func _ready():
-	if len(Global.lvl) <= 2:
+	if Global.boss_lvl_check == 2:
 		get_tree().quit()
 func _input(event:InputEvent):
 	if event is InputEventKey and event.is_action_pressed("ui_home"):

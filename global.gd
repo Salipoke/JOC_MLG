@@ -5,10 +5,18 @@ var lvl = []
 var boss_lvl = []
 var actual_string = ''
 var lvl_i = ''
+var FPS = 0
+var FPS_text = '           Vsync'
+var fullscreen = 'FULLSCREEN : OFF'
+
+
 func _input(event:InputEvent):
 	if event is InputEventKey and event.is_action_pressed("ui_home"):
 		if get_tree().get_current_scene().get_name() == 'options':
 			get_tree().change_scene("res://start.tscn")
+
+
+
 
 func _ready():
 	for i in range(1,16):
