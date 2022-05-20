@@ -6,7 +6,7 @@ valid=false
 
 [deps]
 
-source_file="res://Guillem/Images/__MACOSX/Tank/._Tank.png"
+source_file="res://Images/__MACOSX/Tank/._Tank.png"
 [params]
 
 compress/mode=0
