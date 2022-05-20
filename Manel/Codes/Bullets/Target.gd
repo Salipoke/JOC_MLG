@@ -1,6 +1,6 @@
 extends Sprite
 
-var timer = true
+var timer = false
 
 func _process(delta):
 	if timer == true:

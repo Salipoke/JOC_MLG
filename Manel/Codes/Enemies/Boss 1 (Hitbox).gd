@@ -1,9 +1,10 @@
 extends KinematicBody2D
 
 onready var BULLET_SCENE = preload("res://Manel/Scenes/Bullets/Bullet_base.tscn")
-onready var TARGET = preload("res://Manel/Scenes/Bullets/Target.tscn")
 
-var health = 500
+var health = 1500
+var vel = 6
+var move = Vector2.ZERO
 var damage = 50
 var player = null
 
@@ -13,6 +14,22 @@ func _physics_process(delta):
 		health -= 100
 	if health <= 0:
 		pass
+	
+	#Velocity & Position
+	move = Vector2.ZERO
+	
+	if player != null:
+		var to_player = player.global_position - self.global_position
+		var distance = to_player.length()
+		if distance < 296:
+			move = position.direction_to(player.position) * (-vel)
+		elif distance < 300:
+			pass
+		else:
+			move = position.direction_to(player.position) * vel
+		
+	move = move_and_collide(move)
+#https://www.youtube.com/watch?v=O0rdD104Qsg
 
 func _on_Area2D_body_entered(body):
 	if body.name == "jugateur": #quan s'agunti tot es té que canviar al nom del jugador
@@ -20,26 +37,11 @@ func _on_Area2D_body_entered(body):
 
 func fire():#https://godotengine.org/qa/81726/how-to-make-enemy-shoot-at-player
 	var bullet = BULLET_SCENE.instance()
-	var target = TARGET.instance()
-	#Target
-	target.position = player.position
-	get_parent().add_child(target)
-	#https://godotengine.org/qa/9676/how-do-i-pause-code-like-time-sleep-in-python
-	#Bullet
 	bullet.position = get_global_position()
 	bullet.player = player
 	get_parent().add_child(bullet)
-	$Timer.set_wait_time(5)
-
-func _ready():
-	var escena = fire()
-	$Target.set_wait_time(5)
-	escena.resume()
+	$Timer.set_wait_time(1)
 
 func _on_Timer_timeout():
 	if player != null:
 		fire()
-
-func _on_Target_timeout():
-	TARGET.timer = true
-	
