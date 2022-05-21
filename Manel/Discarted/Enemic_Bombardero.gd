@@ -1,11 +1,13 @@
 extends KinematicBody2D
 
-onready var BULLET_SCENE = preload("res://Manel/Scenes/Bullets/Bullet_base.tscn")
+onready var BULLET_SCENE = preload("res://Manel/Scenes/Bullets/Bullet_Bombardero.tscn")
 onready var TARGET = preload("res://Manel/Scenes/Bullets/Target.tscn")
 
 var health = 500
 var damage = 50
 var player = null
+var p_bullet = Vector2(0,0)
+var target = null
 
 func _physics_process(delta):
 	#Health
@@ -18,28 +20,26 @@ func _on_Area2D_body_entered(body):
 	if body.name == "jugateur": #quan s'agunti tot es té que canviar al nom del jugador
 		player = body
 
-func fire():#https://godotengine.org/qa/81726/how-to-make-enemy-shoot-at-player
-	var bullet = BULLET_SCENE.instance()
-	var target = TARGET.instance()
-	#Target
+func fire():
+	target = TARGET.instance()
 	target.position = player.position
+	p_bullet = target.position
 	get_parent().add_child(target)
-	#https://godotengine.org/qa/9676/how-do-i-pause-code-like-time-sleep-in-python
-	#Bullet
-	bullet.position = get_global_position()
-	bullet.player = player
-	get_parent().add_child(bullet)
+	
+	$Target.set_wait_time(3)
+	$Target.start()
 	$Timer.set_wait_time(5)
 
-func _ready():
-	var escena = fire()
-	$Target.set_wait_time(5)
-	escena.resume()
-
+func foc():
+	var bullet = BULLET_SCENE.instance()
+	bullet.position = get_global_position()
+	bullet.player = p_bullet
+	get_parent().add_child(bullet)
+	
 func _on_Timer_timeout():
 	if player != null:
 		fire()
 
 func _on_Target_timeout():
-	TARGET.timer = true
+	foc()
 	

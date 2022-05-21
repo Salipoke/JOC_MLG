@@ -1,9 +1,9 @@
 extends KinematicBody2D
 
-onready var BULLET_SCENE = preload("res://Manel/Scenes/Bullets/Bullet_base.tscn")
+onready var BULLET_SCENE = preload("res://Manel/Scenes/Bullets/Bullet_Boss 1.tscn")
 
 var health = 1500
-var vel = 6
+var vel = 4.5
 var move = Vector2.ZERO
 var damage = 50
 var player = null

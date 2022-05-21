@@ -5,7 +5,7 @@ onready var BULLET_UP_SCENE = preload("res://Manel/Scenes/Bullets/Bullet_triple_
 onready var BULLET_DOWN_SCENE = preload("res://Manel/Scenes/Bullets/Bullet_tripe_abaix.tscn")
 
 var health = 500
-var vel = 2
+var vel = 1.5
 var move = Vector2.ZERO
 var damage = 50
 var player = null
