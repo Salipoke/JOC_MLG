@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Images/Tank/Tank.png" type="Texture" id=1]
-[ext_resource path="res://Movimiento.gd" type="Script" id=2]
-[ext_resource path="res://Images/Tank/GunTurret.png" type="Texture" id=3]
+[ext_resource path="res://Guillem/Images/Tank/Tank.png" type="Texture" id=1]
+[ext_resource path="res://Guillem/Scripts/Movimiento.gd" type="Script" id=2]
+[ext_resource path="res://Guillem/Images/Tank/GunTurret.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 31, 30.5 )

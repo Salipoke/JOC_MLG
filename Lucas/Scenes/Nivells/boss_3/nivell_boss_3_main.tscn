@@ -1,12 +1,20 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Lucas/Scenes/Nivells/obj/ext_walls.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Lucas/Scenes/Nivells/obj/exemple_size.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Lucas/Scenes/Nivells/obj/small_1.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Lucas/Scripts/UI/Control/inside_level_control.gd" type="Script" id=4]
+[ext_resource path="res://Guillem/Personatge.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Guillem/Scripts/Bales.gd" type="Script" id=6]
+[ext_resource path="res://Lucas/Sprites/background/boss_back.png" type="Texture" id=7]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 4 )
+
+[node name="BossBack" type="Sprite" parent="."]
+position = Vector2( 513.938, 303.5 )
+scale = Vector2( 2.27183, 2.29521 )
+texture = ExtResource( 7 )
 
 [node name="ext_walls" parent="." instance=ExtResource( 1 )]
 
@@ -98,3 +106,9 @@ position = Vector2( 717, 516 )
 [node name="wall14" parent="walls" instance=ExtResource( 3 )]
 position = Vector2( 434, 121 )
 rotation = 1.5708
+
+[node name="Movimiento" parent="." instance=ExtResource( 5 )]
+position = Vector2( 122, 46 )
+
+[node name="Bales" type="Node2D" parent="."]
+script = ExtResource( 6 )

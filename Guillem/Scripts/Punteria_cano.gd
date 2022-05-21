@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-var dest_bullet_rec = preload("res://Bala.tscn")
+var dest_bullet_rec = preload("res://Guillem/Scenes/Bala.tscn")
 export (float) var rotation_speed = 3
 
 var rotation_dir = 0

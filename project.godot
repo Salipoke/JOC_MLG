@@ -17,6 +17,7 @@ config/icon="res://icon.png"
 [autoload]
 
 Global="*res://global.gd"
+Global_guillem="*res://Guillem/Scripts/Global_guillem.gd"
 
 [display]
 

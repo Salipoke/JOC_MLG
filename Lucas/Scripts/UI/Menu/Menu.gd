@@ -6,8 +6,8 @@ func _ready():
 
 
 func _on_StartButton_pressed():
-	get_tree().change_scene('res://Lucas/Scenes/Nivells/level_selector/level_sel_screen.tscn') #Escena que decideix el estil de mapa i el mapa
-	print('start')
+	get_tree().change_scene('res://Lucas/Scenes/Nivells/level_selector/level_sel_screen.tscn')
+	Global.last_scene_midgame = true
 
 
 func _on_OptionButton_pressed():

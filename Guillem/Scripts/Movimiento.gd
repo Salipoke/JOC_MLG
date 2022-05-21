@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-var dest_bullet_rec = preload("res://Bala.tscn")
+var dest_bullet_rec = preload("res://Guillem/Scenes/Bala.tscn")
 
 onready var fireDelayTimer := $FireDelayTimer
 

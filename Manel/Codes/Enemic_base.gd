@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 
-export var BULLET_SCENE : PackedScene
+onready var BULLET_SCENE = preload("res://Manel/Scenes/Bullets/Bullet_base.tscn")
 
 var health = 500
 var vel = 2
