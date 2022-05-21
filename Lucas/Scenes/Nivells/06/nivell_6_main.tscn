@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Lucas/Scenes/Nivells/obj/small_3.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Lucas/Scenes/Nivells/obj/ext_walls.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Lucas/Scenes/Nivells/obj/big.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Lucas/Scripts/UI/Control/inside_level_control.gd" type="Script" id=4]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="ext_walls" parent="." instance=ExtResource( 2 )]
+
+[node name="walls" type="Node2D" parent="."]
+
+[node name="mid_l" parent="walls" instance=ExtResource( 1 )]
+position = Vector2( 125, 300 )
+
+[node name="mid_r" parent="walls" instance=ExtResource( 1 )]
+position = Vector2( 899, 300 )
+
+[node name="mid_mid" parent="walls" instance=ExtResource( 1 )]
+position = Vector2( 512, 300 )
+rotation = 1.5708
+
+[node name="big_u" parent="walls" instance=ExtResource( 3 )]
+position = Vector2( 512, 160 )
+
+[node name="big_u2" parent="walls" instance=ExtResource( 3 )]
+position = Vector2( 512, 130 )
+
+[node name="big_d" parent="walls" instance=ExtResource( 3 )]
+position = Vector2( 512, 440 )
+
+[node name="big_d2" parent="walls" instance=ExtResource( 3 )]
+position = Vector2( 512, 470 )
