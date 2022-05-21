@@ -1,6 +1,6 @@
 extends Line2D
 
-var target
+var target = 5
 var point
 export(NodePath) var targetPath
 export var trailLength = 0

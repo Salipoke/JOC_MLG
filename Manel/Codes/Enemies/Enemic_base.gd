@@ -1,5 +1,7 @@
 extends KinematicBody2D
 
+HEAD:Manel/Codes/Enemies/Enemic_base.gd
+
 onready var BULLET_SCENE = preload("res://Manel/Scenes/Bullets/Bullet_base.tscn")
 
 var health = 500

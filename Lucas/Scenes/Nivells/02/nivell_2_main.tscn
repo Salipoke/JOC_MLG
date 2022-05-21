@@ -1,14 +1,24 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Lucas/Scenes/Nivells/obj/ext_walls.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Lucas/Scenes/Nivells/obj/small_3.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Lucas/Scenes/Nivells/obj/small_2.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Lucas/Scenes/Nivells/obj/small_1.tscn" type="PackedScene" id=4]
-[ext_resource path="res://icon.png" type="Texture" id=5]
+[ext_resource path="res://Guillem/Personatge.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Lucas/Scripts/UI/Control/inside_level_control.gd" type="Script" id=6]
+[ext_resource path="res://Guillem/Scripts/Bales.gd" type="Script" id=7]
+
+[sub_resource type="StreamTexture" id=1]
+flags = 4
+load_path = "res://.import/back.png-04b362e782009479833f34638a0ab7c6.stex"
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 6 )
+
+[node name="Back" type="Sprite" parent="."]
+position = Vector2( 510, 299.5 )
+scale = Vector2( 2.16226, 2.09763 )
+texture = SubResource( 1 )
 
 [node name="ext_walls" parent="." instance=ExtResource( 1 )]
 
@@ -19,14 +29,14 @@ position = Vector2( 150, 270 )
 rotation = 1.5708
 
 [node name="wall2" parent="walls" instance=ExtResource( 3 )]
-position = Vector2( 150, 525 )
+position = Vector2( 150, 541 )
 rotation = 1.5708
 
 [node name="wall3" parent="walls" instance=ExtResource( 2 )]
 position = Vector2( 290, 90 )
 
 [node name="wall4" parent="walls" instance=ExtResource( 3 )]
-position = Vector2( 290, 150 )
+position = Vector2( 290, 164 )
 rotation = 1.5708
 
 [node name="wall5" parent="walls" instance=ExtResource( 4 )]
@@ -34,7 +44,7 @@ position = Vector2( 355, 389 )
 rotation = 1.5708
 
 [node name="wall6" parent="walls" instance=ExtResource( 3 )]
-position = Vector2( 787.84, 535.567 )
+position = Vector2( 787.84, 551.567 )
 rotation = 1.5708
 scale = Vector2( 0.859375, 0.828125 )
 
@@ -48,6 +58,8 @@ rotation = 1.5708
 [node name="wall9" parent="walls" instance=ExtResource( 3 )]
 position = Vector2( 831, 151 )
 
-[node name="Sprite" type="Sprite" parent="."]
-scale = Vector2( 0.828125, 0.859375 )
-texture = ExtResource( 5 )
+[node name="Movimiento" parent="." instance=ExtResource( 5 )]
+position = Vector2( 49, 45 )
+
+[node name="Bales" type="Node2D" parent="."]
+script = ExtResource( 7 )

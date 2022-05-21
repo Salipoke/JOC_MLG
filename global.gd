@@ -2,7 +2,6 @@ extends Node
 
 
 var Bales
-
 var level_counter_for_boss = 0
 var boss_lvl_check = -1
 var lvl = []
@@ -12,12 +11,17 @@ var lvl_i = ''
 var FPS = 0
 var FPS_text = '           Vsync'
 var fullscreen = 'FULLSCREEN : OFF'
+var last_scene_midgame = false
+
 
 
 func _input(event:InputEvent):
 	if event is InputEventKey and event.is_action_pressed("ui_home"):
 		if get_tree().get_current_scene().get_name() == 'options':
-			get_tree().change_scene("res://start.tscn")
+			if last_scene_midgame == true:
+				get_tree().change_scene("res://Lucas/Scenes/UI/Control/between_lvl.tscn")
+			else:
+				get_tree().change_scene('res://start.tscn')
 
 
 
@@ -37,4 +41,5 @@ func _ready():
 		boss_lvl.append(actual_string)
 	randomize()
 	lvl.shuffle()
+
 
