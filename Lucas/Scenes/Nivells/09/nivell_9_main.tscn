@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Lucas/Scenes/Nivells/obj/ext_walls.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Lucas/Scenes/Nivells/obj/small_3.tscn" type="PackedScene" id=2]
@@ -7,6 +7,8 @@
 [ext_resource path="res://Lucas/Scenes/Nivells/obj/small_1.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Lucas/Scripts/UI/Control/inside_level_control.gd" type="Script" id=6]
 [ext_resource path="res://Guillem/Scripts/Bales.gd" type="Script" id=7]
+[ext_resource path="res://Lucas/Sprites/wals/lvl_6_exp_3.png" type="Texture" id=8]
+[ext_resource path="res://Lucas/sounds/music_sounds/mountain-trials.ogg" type="AudioStream" id=9]
 
 [sub_resource type="StreamTexture" id=1]
 flags = 4
@@ -123,3 +125,69 @@ scale = Vector2( 0.75, 0.75 )
 
 [node name="Bales" type="Node2D" parent="."]
 script = ExtResource( 7 )
+
+[node name="Lvl6Exp3" type="Sprite" parent="."]
+position = Vector2( 207.598, 244.988 )
+rotation = 1.5708
+scale = Vector2( 0.564323, 0.399944 )
+texture = ExtResource( 8 )
+
+[node name="Lvl6Exp4" type="Sprite" parent="."]
+position = Vector2( 958, 26 )
+scale = Vector2( 0.416668, 0.416667 )
+texture = ExtResource( 8 )
+
+[node name="Lvl6Exp5" type="Sprite" parent="."]
+position = Vector2( 958, 272.5 )
+scale = Vector2( 0.416666, 0.541667 )
+texture = ExtResource( 8 )
+
+[node name="Lvl6Exp6" type="Sprite" parent="."]
+position = Vector2( 958, 524.5 )
+scale = Vector2( 0.388889, 0.541666 )
+texture = ExtResource( 8 )
+
+[node name="Lvl6Exp7" type="Sprite" parent="."]
+position = Vector2( 532, 436.5 )
+scale = Vector2( 0.416667, 0.180556 )
+texture = ExtResource( 8 )
+
+[node name="Lvl6Exp8" type="Sprite" parent="."]
+position = Vector2( 532.203, 336.959 )
+rotation = 1.5708
+scale = Vector2( 0.178291, 0.401266 )
+texture = ExtResource( 8 )
+
+[node name="Lvl6Exp9" type="Sprite" parent="."]
+position = Vector2( 388, 530.5 )
+scale = Vector2( 0.416667, 0.263889 )
+texture = ExtResource( 8 )
+
+[node name="Lvl6Exp10" type="Sprite" parent="."]
+position = Vector2( 388, 382.5 )
+scale = Vector2( 0.416667, 0.236111 )
+texture = ExtResource( 8 )
+
+[node name="Lvl6Exp11" type="Sprite" parent="."]
+position = Vector2( 387.75, 237 )
+scale = Vector2( 0.423611, 0.194444 )
+texture = ExtResource( 8 )
+
+[node name="Lvl6Exp12" type="Sprite" parent="."]
+position = Vector2( 831.5, 158.5 )
+scale = Vector2( 0.430556, 0.430556 )
+texture = ExtResource( 8 )
+
+[node name="Lvl6Exp13" type="Sprite" parent="."]
+position = Vector2( 832, 313 )
+scale = Vector2( 0.416667, 0.277778 )
+texture = ExtResource( 8 )
+
+[node name="Lvl6Exp14" type="Sprite" parent="."]
+position = Vector2( 732, 257.5 )
+scale = Vector2( 0.416667, 0.402778 )
+texture = ExtResource( 8 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 9 )
+autoplay = true

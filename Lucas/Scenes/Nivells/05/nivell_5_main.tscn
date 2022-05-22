@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Guillem/Personatge.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Lucas/Scenes/Nivells/obj/ext_walls.tscn" type="PackedScene" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://Lucas/Scripts/UI/Control/inside_level_control.gd" type="Script" id=7]
 [ext_resource path="res://Guillem/Scripts/Bales.gd" type="Script" id=8]
 [ext_resource path="res://Lucas/Sprites/wals/lvl_6_exp_3.png" type="Texture" id=9]
+[ext_resource path="res://Lucas/sounds/music_sounds/mountain-trials.ogg" type="AudioStream" id=10]
 
 [sub_resource type="StreamTexture" id=1]
 flags = 4
@@ -18,28 +19,29 @@ load_path = "res://.import/back.png-04b362e782009479833f34638a0ab7c6.stex"
 script = ExtResource( 7 )
 
 [node name="Back" type="Sprite" parent="."]
-position = Vector2( 510, 299.5 )
+position = Vector2( 791, 341 )
 scale = Vector2( 2.16226, 2.09763 )
 texture = SubResource( 1 )
+offset = Vector2( -129.957, -19.7842 )
 
 [node name="ext_walls" parent="." instance=ExtResource( 2 )]
 
 [node name="walls" type="Node2D" parent="."]
 
 [node name="wall1" parent="walls" instance=ExtResource( 3 )]
-position = Vector2( 150, 75 )
+position = Vector2( 150, 59 )
 rotation = 1.5708
 
 [node name="wall2" parent="walls" instance=ExtResource( 3 )]
-position = Vector2( 150, 525 )
+position = Vector2( 150, 541 )
 rotation = 1.5708
 
 [node name="small_1" parent="walls" instance=ExtResource( 5 )]
-position = Vector2( 271, 251 )
+position = Vector2( 270, 251 )
 rotation = 1.5708
 
 [node name="small_2" parent="walls" instance=ExtResource( 5 )]
-position = Vector2( 271, 349 )
+position = Vector2( 270, 349 )
 rotation = 1.5708
 
 [node name="small_3" parent="walls" instance=ExtResource( 5 )]
@@ -72,5 +74,20 @@ position = Vector2( 100, 300 )
 script = ExtResource( 8 )
 
 [node name="Lvl6Exp3" type="Sprite" parent="."]
-position = Vector2( 285, 304 )
+position = Vector2( 271, 300 )
+scale = Vector2( 0.416667, 0.434029 )
 texture = ExtResource( 9 )
+
+[node name="Lvl6Exp5" type="Sprite" parent="."]
+position = Vector2( 752.917, 300.397 )
+scale = Vector2( 0.418981, 0.433405 )
+texture = ExtResource( 9 )
+
+[node name="Lvl6Exp4" type="Sprite" parent="."]
+position = Vector2( 512, 300 )
+scale = Vector2( 0.416667, 0.434029 )
+texture = ExtResource( 9 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )
+autoplay = true

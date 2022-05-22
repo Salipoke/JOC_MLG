@@ -26,17 +26,24 @@ margin_bottom = 15.0
 shape = SubResource( 1 )
 
 [node name="Hor" type="Sprite" parent="."]
-position = Vector2( 1.30236e-05, 0.499999 )
-scale = Vector2( 0.902998, 0.232 )
+position = Vector2( -128.375, 0.249996 )
+scale = Vector2( 0.452822, 0.252 )
+texture = ExtResource( 1 )
+
+[node name="Hor2" type="Sprite" parent="."]
+position = Vector2( 127.5, 0.249996 )
+scale = Vector2( 0.453263, 0.252 )
 texture = ExtResource( 1 )
 
 [node name="Ver" type="Sprite" parent="."]
-position = Vector2( 0.413764, -0.352911 )
+visible = false
+position = Vector2( -0.146644, 0.112266 )
 rotation = -1.5708
-scale = Vector2( 0.466064, 0.647348 )
+scale = Vector2( 0.455457, 0.647986 )
 texture = ExtResource( 2 )
 
 [node name="PENEMURO" type="Area2D" parent="." groups=["walls"]]
+visible = false
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="PENEMURO"]
 shape = SubResource( 2 )

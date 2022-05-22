@@ -30,6 +30,12 @@ res=false
 resolution=false
 reso=false
 
+[importer_defaults]
+
+texture={
+"flags/filter": false
+}
+
 [input]
 
 ui_home={

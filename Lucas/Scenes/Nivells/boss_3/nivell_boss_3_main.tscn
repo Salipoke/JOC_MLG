@@ -23,14 +23,14 @@ position = Vector2( 85, -75 )
 
 [node name="walls" type="Node2D" parent="."]
 
+[node name="wall" parent="walls" instance=ExtResource( 3 )]
+position = Vector2( 51, 109 )
+
 [node name="wall2" parent="walls" instance=ExtResource( 3 )]
-position = Vector2( 641, 289 )
+position = Vector2( 641, 297 )
 
 [node name="wall5" parent="walls" instance=ExtResource( 3 )]
 position = Vector2( 781, 103 )
-
-[node name="wall3" parent="walls" instance=ExtResource( 3 )]
-position = Vector2( 436, 186 )
 
 [node name="wall4" parent="walls" instance=ExtResource( 3 )]
 position = Vector2( 438, 520 )
@@ -51,11 +51,11 @@ position = Vector2( 893, 317 )
 position = Vector2( 601, 112 )
 
 [node name="wall11" parent="walls" instance=ExtResource( 3 )]
-position = Vector2( 86, 174 )
+position = Vector2( 86, 158 )
 rotation = 1.5708
 
 [node name="wall12" parent="walls" instance=ExtResource( 3 )]
-position = Vector2( 606, 354 )
+position = Vector2( 605, 346 )
 rotation = 1.5708
 
 [node name="wall13" parent="walls" instance=ExtResource( 3 )]
@@ -93,9 +93,6 @@ rotation = 1.5708
 [node name="wall24" parent="walls" instance=ExtResource( 3 )]
 position = Vector2( 49, 309 )
 
-[node name="wall" parent="walls" instance=ExtResource( 3 )]
-position = Vector2( 51, 109 )
-
 [node name="wall22" parent="walls" instance=ExtResource( 3 )]
 position = Vector2( 180, 493 )
 rotation = 1.5708
@@ -104,8 +101,11 @@ rotation = 1.5708
 position = Vector2( 717, 516 )
 
 [node name="wall14" parent="walls" instance=ExtResource( 3 )]
-position = Vector2( 434, 121 )
+position = Vector2( 434, 137 )
 rotation = 1.5708
+
+[node name="wall3" parent="walls" instance=ExtResource( 3 )]
+position = Vector2( 436, 186 )
 
 [node name="Movimiento" parent="." instance=ExtResource( 5 )]
 position = Vector2( 122, 46 )

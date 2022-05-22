@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/battle.wav-ed049a8f8c94ddcaeba7b0b4e278acb9.sample"
+
+[deps]
+
+source_file="res://Lucas/sounds/Space Music Pack/battle.wav"
+dest_files=[ "res://.import/battle.wav-ed049a8f8c94ddcaeba7b0b4e278acb9.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -21,6 +21,7 @@ func _input(event:InputEvent):
 				OS.window_fullscreen = true
 				text = 'FULLSCREEN : ON'
 				Global.fullscreen = text
+			$AudioStreamPlayer2.play()
 
 func window_resize():
 	var current_size = OS.get_window_size()
