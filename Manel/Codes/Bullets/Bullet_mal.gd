@@ -3,11 +3,11 @@ extends Area2D
 var move = Vector2.ZERO
 var look_player = Vector2.ZERO
 var player = null
-var vel = 2
-var damage = 100
+var vel = 3
+var damage = 200
 
 func _ready():
-	look_player = player.position - global_position
+	look_player = player - global_position
 
 func _physics_process(delta):
 	move = Vector2.ZERO
@@ -16,5 +16,6 @@ func _physics_process(delta):
 	move = move.normalized() * vel
 	position += move
 
-func _on_Visibility_R_screen_exited():
+func _on_VisibilityNotifier2D_screen_exited():
 	queue_free()
+	

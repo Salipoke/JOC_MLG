@@ -4,6 +4,7 @@ var move = Vector2.ZERO
 var look_player = Vector2.ZERO
 var player = null
 var vel = 3
+var damage = 250
 
 func _ready():
 	look_player = player.position - global_position
