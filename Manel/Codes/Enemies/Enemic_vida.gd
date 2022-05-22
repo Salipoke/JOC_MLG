@@ -1,9 +1,9 @@
 extends KinematicBody2D
 
-onready var BULLET_SCENE = preload("res://Manel/Scenes/Bullets/Bullet_velocitat.tscn")
+onready var BULLET_SCENE = preload("res://Manel/Scenes/Bullets/Bullet_base.tscn")
 
-var health = 300
-var vel = 3
+var health = 600
+var vel = 1.5
 var move = Vector2.ZERO
 var player = null
 
@@ -37,9 +37,9 @@ func _on_Area2D_body_entered(body):
 func fire():
 	var bullet = BULLET_SCENE.instance()
 	bullet.position = get_global_position()
-	bullet.player = player
+	bullet.player = player.position
 	get_parent().add_child(bullet)
-	$Timer.set_wait_time(1.5)
+	$Timer.set_wait_time(1.75)
 
 func _on_Timer_timeout():
 	if player != null:

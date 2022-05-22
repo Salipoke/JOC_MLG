@@ -53,3 +53,7 @@ func _input(event):
 				dest_bullet_inst.global_position = $Apuntado/Multiple.global_position
 				Global.Bales.add_child(dest_bullet_inst)
 
+
+
+func _on_Area2D_body_entered(body):
+	pass # Replace with function body.

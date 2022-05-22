@@ -5,15 +5,15 @@ onready var BULLET_SCENE = preload("res://Manel/Scenes/Bullets/Bullet_Boss 1.tsc
 var health = 1500
 var vel = 4.5
 var move = Vector2.ZERO
-var damage = 50
 var player = null
 
 func _physics_process(delta):
 	#Health
-	if 1 == 1: #posar un if q funcioni quan la area de la bala del jugador doni al enemic
+	if $Hitbox.health == true:
 		health -= 100
+		$Hitbox.health = false
 	if health <= 0:
-		pass
+		queue_free()
 	
 	#Velocity & Position
 	move = Vector2.ZERO
@@ -29,13 +29,12 @@ func _physics_process(delta):
 			move = position.direction_to(player.position) * vel
 		
 	move = move_and_collide(move)
-#https://www.youtube.com/watch?v=O0rdD104Qsg
 
 func _on_Area2D_body_entered(body):
-	if body.name == "jugateur": #quan s'agunti tot es té que canviar al nom del jugador
+	if body.name == "Movimiento":
 		player = body
 
-func fire():#https://godotengine.org/qa/81726/how-to-make-enemy-shoot-at-player
+func fire():
 	var bullet = BULLET_SCENE.instance()
 	bullet.position = get_global_position()
 	bullet.player = player

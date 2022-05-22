@@ -1,11 +1,13 @@
 extends KinematicBody2D
 
-onready var BULLET_SCENE = preload("res://Manel/Scenes/Bullets/Bullet_velocitat.tscn")
+onready var BULLET_SCENE = preload("res://Manel/Scenes/Bullets/Bullet_Boss 1.tscn")
+onready var MINIONS = preload("res://Manel/Scenes/Enemies/Minion.tscn")
 
-var health = 300
-var vel = 3
+var health = 1500
+var vel = 4.5
 var move = Vector2.ZERO
 var player = null
+var spawn_minions = 1
 
 func _physics_process(delta):
 	#Health
@@ -29,6 +31,14 @@ func _physics_process(delta):
 			move = position.direction_to(player.position) * vel
 		
 	move = move_and_collide(move)
+	
+	#Minions
+	if spawn_minions == 1:
+		var minion1 = MINIONS.instance()
+		minion1.position = get_global_position().x +90
+		#get_parent().add_child(minion1)
+		
+		spawn_minions = 0
 
 func _on_Area2D_body_entered(body):
 	if body.name == "Movimiento":
@@ -39,7 +49,7 @@ func fire():
 	bullet.position = get_global_position()
 	bullet.player = player
 	get_parent().add_child(bullet)
-	$Timer.set_wait_time(1.5)
+	$Timer.set_wait_time(1)
 
 func _on_Timer_timeout():
 	if player != null:

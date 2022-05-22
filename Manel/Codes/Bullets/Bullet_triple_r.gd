@@ -3,7 +3,7 @@ extends KinematicBody2D
 var move = Vector2.ZERO
 var look_player = Vector2.ZERO
 var player = null
-var vel = 3
+var vel = 2
 
 func _ready():
 	look_player = player.position - global_position

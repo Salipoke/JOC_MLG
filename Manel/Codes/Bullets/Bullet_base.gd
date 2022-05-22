@@ -14,8 +14,6 @@ func _physics_process(delta):
 	move = move.move_toward(look_player, delta)
 	move = move.normalized() * vel
 	position += move
-	if (position * 2) >= (player * 2):
-		queue_free()
 
 func _on_VisibilityNotifier2D_screen_exited():
 	queue_free()

@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 5, 6 )
 
-[node name="Area2D" type="Area2D"]
+[node name="Area2D" type="Area2D" groups=["bullets_player"]]
 script = ExtResource( 2 )
 
 [node name="Bala" type="Sprite" parent="."]
