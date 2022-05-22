@@ -1,4 +1,4 @@
-extends KinematicBody2D
+extends Area2D
 
 var move = Vector2.ZERO
 var look_player = Vector2.ZERO

@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 30, 23 )
 
-[node name="Bullet_triple_adalt" type="KinematicBody2D"]
+[node name="Bullet_triple_adalt" type="Area2D" groups=["bullet_enemics"]]
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
@@ -15,10 +15,7 @@ position = Vector2( 0, 1.90735e-06 )
 scale = Vector2( 0.127083, 0.13125 )
 texture = ExtResource( 1 )
 
-[node name="Area2D" type="Area2D" parent="."]
-visible = false
-
-[node name="Collision R" type="CollisionShape2D" parent="Area2D"]
+[node name="Collision R" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
 
 [node name="Visibility R" type="VisibilityNotifier2D" parent="."]

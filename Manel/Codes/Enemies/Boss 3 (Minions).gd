@@ -8,6 +8,19 @@ var vel = 4.5
 var move = Vector2.ZERO
 var player = null
 var spawn_minions = 1
+var check_m = 4
+#Minion1
+var minion1 = null
+var loop1 = 1
+#Minion2
+var minion2= null
+var loop2 = 1
+#Minion3
+var minion3 = null
+var loop3 = 1
+#Minion4
+var minion4= null
+var loop4 = 1
 
 func _physics_process(delta):
 	#Health
@@ -32,13 +45,50 @@ func _physics_process(delta):
 		
 	move = move_and_collide(move)
 	
-	#Minions
+	#Coses de minions i tal
 	if spawn_minions == 1:
-		var minion1 = MINIONS.instance()
-		minion1.position = get_global_position().x +90
-		#get_parent().add_child(minion1)
+		#Minion 1
+		minion1 = MINIONS.instance()
+		minion1.position = $Spawn1.get_global_position()
+		get_parent().add_child(minion1)
+		#Minion 2
+		minion2 = MINIONS.instance()
+		minion2.position = $Spawn2.get_global_position()
+		get_parent().add_child(minion2)
+		#Minion 3
+		minion3 = MINIONS.instance()
+		minion3.position = $Spawn3.get_global_position()
+		get_parent().add_child(minion3)
+		#Minion 4
+		minion4 = MINIONS.instance()
+		minion4.position = $Spawn4.get_global_position()
+		get_parent().add_child(minion4)
 		
 		spawn_minions = 0
+	else:
+		#Minion1
+		if loop1 == 1 and minion1.mort == true:
+			check_m -= 1
+			minion1.queue_free()
+			loop1 = 0
+		#Minion2
+		if loop2 == 1 and minion2.mort == true:
+			check_m -= 1
+			minion2.queue_free()
+			loop2= 0
+		#Minion3
+		if loop3 == 1 and minion3.mort == true:
+			check_m -= 1
+			minion3.queue_free()
+			loop3 = 0
+		#Minion4
+		if loop4 == 1 and minion4.mort == true:
+			check_m -= 1
+			minion4.queue_free()
+			loop4= 0
+		#Escut
+		if check_m == 0:
+			$Hitbox.minions_morts = true
 
 func _on_Area2D_body_entered(body):
 	if body.name == "Movimiento":

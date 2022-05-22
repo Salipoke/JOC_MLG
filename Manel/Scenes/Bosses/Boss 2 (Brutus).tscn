@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://Manel/Codes/Hitboxes/Hitbox_base.gd" type="Script" id=1]
+[ext_resource path="res://Manel/Codes/Hitboxes/Hitbox_brutus.gd" type="Script" id=1]
 [ext_resource path="res://Manel/Assets/brutus.webp" type="Texture" id=2]
 [ext_resource path="res://Manel/Codes/Enemies/Boss 2 (Brutus).gd" type="Script" id=3]
 

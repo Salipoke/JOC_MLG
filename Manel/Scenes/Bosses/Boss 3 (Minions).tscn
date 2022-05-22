@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Manel/Assets/Star_Destroyer.webp" type="Texture" id=1]
-[ext_resource path="res://Manel/Codes/Hitboxes/Hitbox_base.gd" type="Script" id=2]
+[ext_resource path="res://Manel/Codes/Hitboxes/Hitbox_minions.gd" type="Script" id=2]
 [ext_resource path="res://Manel/Codes/Enemies/Boss 3 (Minions).gd" type="Script" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -38,3 +38,22 @@ shape = SubResource( 3 )
 
 [node name="Timer" type="Timer" parent="."]
 autostart = true
+
+[node name="Spawn1" type="Node2D" parent="."]
+position = Vector2( 2.38419e-07, -50 )
+scale = Vector2( 2.98514e-05, -7.24926e-05 )
+
+[node name="Spawn2" type="Node2D" parent="."]
+position = Vector2( 50, 0 )
+scale = Vector2( 2.98514e-05, -7.24926e-05 )
+
+[node name="Spawn3" type="Node2D" parent="."]
+position = Vector2( 0, 50 )
+scale = Vector2( 2.98514e-05, -7.24926e-05 )
+
+[node name="Spawn4" type="Node2D" parent="."]
+position = Vector2( -50, 0 )
+scale = Vector2( 2.98514e-05, -7.24926e-05 )
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

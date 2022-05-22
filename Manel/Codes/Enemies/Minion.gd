@@ -6,6 +6,7 @@ var health = 300
 var vel = 1.5
 var move = Vector2.ZERO
 var player = null
+var mort = false
 
 func _physics_process(delta):
 	#Health
@@ -13,7 +14,7 @@ func _physics_process(delta):
 		health -= 100
 		$Hitbox.health = false
 	if health <= 0:
-		queue_free()
+		mort = true
 	
 	#Velocity & Position
 	move = Vector2.ZERO
@@ -29,6 +30,7 @@ func _physics_process(delta):
 			move = position.direction_to(player.position) * vel
 		
 	move = move_and_collide(move)
+	
 
 func _on_Area2D_body_entered(body):
 	if body.name == "Movimiento":
