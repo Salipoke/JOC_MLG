@@ -12,8 +12,7 @@
 [ext_resource path="res://Lucas/sounds/music_sounds/mountain-trials.ogg" type="AudioStream" id=10]
 
 [sub_resource type="StreamTexture" id=1]
-flags = 4
-load_path = "res://.import/back.png-04b362e782009479833f34638a0ab7c6.stex"
+load_path = "res://.import/back.png-10b679116464f5e9ece7d69abd6aedda.stex"
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 1 )

@@ -6,10 +6,7 @@
 [ext_resource path="res://Guillem/Personatge.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Guillem/Scripts/Bales.gd" type="Script" id=5]
 [ext_resource path="res://Lucas/sounds/music_sounds/mountain-trials.ogg" type="AudioStream" id=6]
-
-[sub_resource type="StreamTexture" id=1]
-flags = 4
-load_path = "res://.import/back.png-04b362e782009479833f34638a0ab7c6.stex"
+[ext_resource path="res://Lucas/Sprites/background/back.png" type="Texture" id=7]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 3 )
@@ -17,7 +14,7 @@ script = ExtResource( 3 )
 [node name="Back" type="Sprite" parent="."]
 position = Vector2( 510, 299.5 )
 scale = Vector2( 2.16226, 2.09763 )
-texture = SubResource( 1 )
+texture = ExtResource( 7 )
 
 [node name="ext_walls" parent="." instance=ExtResource( 1 )]
 
