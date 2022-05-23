@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Legend of Zelda - Chest Opening and Getting Item.-YTConverter.app.wav-1db774b4892fc8ef544d9a2f39020f2c.sample"
+
+[deps]
+
+source_file="res://Lucas/sounds/Legend of Zelda - Chest Opening and Getting Item.-YTConverter.app.wav"
+dest_files=[ "res://.import/Legend of Zelda - Chest Opening and Getting Item.-YTConverter.app.wav-1db774b4892fc8ef544d9a2f39020f2c.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

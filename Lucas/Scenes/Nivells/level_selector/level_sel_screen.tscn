@@ -1,19 +1,126 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://Lucas/Scripts/UI/level_selector/level_sel.gd" type="Script" id=1]
+[ext_resource path="res://Lucas/Sprites/lvl_selection/15.PNG" type="Texture" id=2]
+[ext_resource path="res://Lucas/Sprites/lvl_selection/11.PNG" type="Texture" id=3]
+[ext_resource path="res://Lucas/Sprites/lvl_selection/13.PNG" type="Texture" id=4]
+[ext_resource path="res://Lucas/Sprites/lvl_selection/14.PNG" type="Texture" id=5]
+[ext_resource path="res://Lucas/Sprites/lvl_selection/12.PNG" type="Texture" id=6]
+[ext_resource path="res://Lucas/Sprites/lvl_selection/07.PNG" type="Texture" id=7]
+[ext_resource path="res://Lucas/Sprites/lvl_selection/08.PNG" type="Texture" id=8]
+[ext_resource path="res://Lucas/Sprites/lvl_selection/10.PNG" type="Texture" id=9]
+[ext_resource path="res://Lucas/Sprites/lvl_selection/05.PNG" type="Texture" id=10]
+[ext_resource path="res://Lucas/Sprites/lvl_selection/01.PNG" type="Texture" id=11]
+[ext_resource path="res://Lucas/Sprites/lvl_selection/06.PNG" type="Texture" id=12]
+[ext_resource path="res://Lucas/Sprites/lvl_selection/02.PNG" type="Texture" id=13]
+[ext_resource path="res://Lucas/Sprites/lvl_selection/03.PNG" type="Texture" id=14]
+[ext_resource path="res://Lucas/Sprites/lvl_selection/04.PNG" type="Texture" id=15]
+[ext_resource path="res://Lucas/Sprites/lvl_selection/09.PNG" type="Texture" id=16]
+[ext_resource path="res://Lucas/Sprites/lvl_selection/boss_01.PNG" type="Texture" id=17]
+[ext_resource path="res://Lucas/Sprites/lvl_selection/boss_02.PNG" type="Texture" id=18]
+[ext_resource path="res://Lucas/Sprites/lvl_selection/boss_03.PNG" type="Texture" id=19]
+[ext_resource path="res://Lucas/sounds/temp.wav" type="AudioStream" id=20]
 
 [node name="level_sel" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 
 [node name="Label" type="Label" parent="."]
-margin_left = 419.0
-margin_top = 254.0
-margin_right = 548.0
-margin_bottom = 268.0
+margin_left = 512.0
+margin_top = 300.0
+margin_right = 641.0
+margin_bottom = 314.0
 autowrap = true
 uppercase = true
 script = ExtResource( 1 )
+
+[node name="01" type="Sprite" parent="Label"]
+scale = Vector2( 0.34, 0.34 )
+texture = ExtResource( 11 )
+
+[node name="02" type="Sprite" parent="Label"]
+scale = Vector2( 0.34, 0.34 )
+texture = ExtResource( 13 )
+
+[node name="04" type="Sprite" parent="Label"]
+scale = Vector2( 0.34, 0.34 )
+texture = ExtResource( 15 )
+
+[node name="03" type="Sprite" parent="Label"]
+scale = Vector2( 0.34, 0.34 )
+texture = ExtResource( 14 )
+
+[node name="05" type="Sprite" parent="Label"]
+scale = Vector2( 0.34, 0.34 )
+texture = ExtResource( 10 )
+
+[node name="06" type="Sprite" parent="Label"]
+scale = Vector2( 0.34, 0.34 )
+texture = ExtResource( 12 )
+
+[node name="07" type="Sprite" parent="Label"]
+scale = Vector2( 0.34, 0.34 )
+texture = ExtResource( 7 )
+
+[node name="08" type="Sprite" parent="Label"]
+scale = Vector2( 0.34, 0.34 )
+texture = ExtResource( 8 )
+
+[node name="09" type="Sprite" parent="Label"]
+scale = Vector2( 0.34, 0.34 )
+texture = ExtResource( 16 )
+
+[node name="10" type="Sprite" parent="Label"]
+scale = Vector2( 0.34, 0.34 )
+texture = ExtResource( 9 )
+
+[node name="11" type="Sprite" parent="Label"]
+scale = Vector2( 0.34, 0.34 )
+texture = ExtResource( 3 )
+
+[node name="12" type="Sprite" parent="Label"]
+scale = Vector2( 0.34, 0.34 )
+texture = ExtResource( 6 )
+
+[node name="13" type="Sprite" parent="Label"]
+scale = Vector2( 0.34, 0.34 )
+texture = ExtResource( 4 )
+
+[node name="14" type="Sprite" parent="Label"]
+scale = Vector2( 0.34, 0.34 )
+texture = ExtResource( 5 )
+
+[node name="15" type="Sprite" parent="Label"]
+scale = Vector2( 0.34, 0.34 )
+texture = ExtResource( 2 )
+
+[node name="Boss01" type="Sprite" parent="Label"]
+visible = false
+modulate = Color( 0.478431, 0.478431, 0.478431, 1 )
+scale = Vector2( 0.75, 0.75 )
+texture = ExtResource( 17 )
+
+[node name="Boss02" type="Sprite" parent="Label"]
+visible = false
+modulate = Color( 0.337255, 0.337255, 0.337255, 1 )
+position = Vector2( 3, 22 )
+scale = Vector2( 0.75, 0.75 )
+texture = ExtResource( 18 )
+
+[node name="Boss03" type="Sprite" parent="Label"]
+visible = false
+modulate = Color( 0.356863, 0.356863, 0.356863, 1 )
+position = Vector2( -10, 9 )
+scale = Vector2( 0.75, 0.75 )
+texture = ExtResource( 19 )
+
+[node name="ColorRect" type="ColorRect" parent="Label"]
+visible = false
+margin_left = -512.0
+margin_top = -300.0
+margin_right = 512.0
+margin_bottom = 299.0
+color = Color( 0, 0, 0, 1 )
 
 [node name="Timer" type="Timer" parent="Label"]
 wait_time = 4.0
@@ -25,6 +132,10 @@ autostart = true
 
 [node name="Timer3" type="Timer" parent="Label"]
 wait_time = 0.1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Label"]
+stream = ExtResource( 20 )
+autoplay = true
 
 [connection signal="timeout" from="Label/Timer" to="Label" method="_on_Timer_timeout"]
 [connection signal="timeout" from="Label/Timer2" to="Label" method="_on_Timer2_timeout"]

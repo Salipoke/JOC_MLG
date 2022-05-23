@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/attack.wav-d8f396fa6d12af64e046cb2f8f2c2d15.sample"
+
+[deps]
+
+source_file="res://Lucas/sounds/music_sounds/attack.wav"
+dest_files=[ "res://.import/attack.wav-d8f396fa6d12af64e046cb2f8f2c2d15.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

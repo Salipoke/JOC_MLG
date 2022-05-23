@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Lucas/Scenes/Nivells/obj/ext_walls.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Lucas/Scenes/Nivells/obj/big.tscn" type="PackedScene" id=2]
@@ -7,10 +7,10 @@
 [ext_resource path="res://Lucas/Scripts/UI/Control/inside_level_control.gd" type="Script" id=5]
 [ext_resource path="res://Guillem/Personatge.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Guillem/Scripts/Bales.gd" type="Script" id=7]
+[ext_resource path="res://Lucas/sounds/music_sounds/mountain-trials.ogg" type="AudioStream" id=8]
 
 [sub_resource type="StreamTexture" id=1]
 flags = 4
-load_path = "res://.import/back.png-04b362e782009479833f34638a0ab7c6.stex"
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 5 )
@@ -57,3 +57,7 @@ position = Vector2( 793, 381 )
 
 [node name="Bales" type="Node2D" parent="."]
 script = ExtResource( 7 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+autoplay = true

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/scream.wav-56d5d8039177013776902c95d423539f.sample"
+
+[deps]
+
+source_file="res://Lucas/sounds/Space Music Pack/fx/scream.wav"
+dest_files=[ "res://.import/scream.wav-56d5d8039177013776902c95d423539f.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
