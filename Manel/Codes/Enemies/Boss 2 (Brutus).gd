@@ -28,12 +28,14 @@ func _physics_process(delta):
 		else:
 			move = position.direction_to(player.position) * vel
 		
+		$Animacio.look_at(player.global_position)
+		
 	move = move_and_collide(move)
 
 func _on_Area2D_body_entered(body):
 	if body.name == "Movimiento":
 		player = body
-
+		
 func fire():
 	var bullet = BULLET_SCENE.instance()
 	bullet.position = get_global_position()

@@ -29,6 +29,8 @@ func _physics_process(delta):
 		else:
 			move = position.direction_to(player.position) * vel
 		
+		$Sprite.look_at(player.global_position)
+		
 	move = move_and_collide(move)
 
 func _on_Area2D_body_entered(body):

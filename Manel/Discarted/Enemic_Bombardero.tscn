@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Manel/Assets/mortero.webp" type="Texture" id=1]
+[ext_resource path="res://Manel/Discarted/mortero.webp" type="Texture" id=1]
 [ext_resource path="res://Manel/Discarted/Enemic_Bombardero.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]

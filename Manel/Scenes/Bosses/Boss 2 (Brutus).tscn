@@ -1,10 +1,24 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Manel/Codes/Hitboxes/Hitbox_brutus.gd" type="Script" id=1]
-[ext_resource path="res://Manel/Assets/brutus.webp" type="Texture" id=2]
+[ext_resource path="res://Manel/Assets/Tanks/tank_boss2.png" type="Texture" id=2]
 [ext_resource path="res://Manel/Codes/Enemies/Boss 2 (Brutus).gd" type="Script" id=3]
+[ext_resource path="res://Manel/Assets/Tanks/tank_boss2_shield.png" type="Texture" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ ExtResource( 4 ) ],
+"loop": true,
+"name": "Shield",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "Normal",
+"speed": 5.0
+} ]
 
 [sub_resource type="CircleShape2D" id=2]
 radius = 1886.92
@@ -13,16 +27,18 @@ radius = 1886.92
 extents = Vector2( 7.11111, 7.11111 )
 
 [node name="Boss 2 (Brutus)" type="KinematicBody2D"]
+scale = Vector2( 2.5, 2.5 )
 script = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 scale = Vector2( 1.5, 1.5 )
 shape = SubResource( 1 )
 
-[node name="Sprite" type="Sprite" parent="."]
-position = Vector2( -3.54222e-07, 5.96046e-08 )
-scale = Vector2( 0.0428571, 0.0441826 )
-texture = ExtResource( 2 )
+[node name="Animacio" type="AnimatedSprite" parent="."]
+position = Vector2( -0.111445, 0.499999 )
+scale = Vector2( 0.581209, 0.569767 )
+frames = SubResource( 4 )
+animation = "Shield"
 
 [node name="Area2D" type="Area2D" parent="."]
 visible = false
