@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Manel/Codes/Enemies/Enemic_base.gd" type="Script" id=1]
-[ext_resource path="res://Manel/Assets/Among us horse.webp" type="Texture" id=2]
+[ext_resource path="res://Manel/Assets/Sprites finals/Tanks/tank_base.png" type="Texture" id=2]
 [ext_resource path="res://Manel/Codes/Hitboxes/Hitbox_base.gd" type="Script" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -20,8 +20,8 @@ script = ExtResource( 1 )
 shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 2.44379e-06, 0 )
-scale = Vector2( 0.08, 0.145985 )
+position = Vector2( -1.43051e-06, 0.25 )
+scale = Vector2( 0.47619, 0.445652 )
 texture = ExtResource( 2 )
 
 [node name="Area2D" type="Area2D" parent="."]

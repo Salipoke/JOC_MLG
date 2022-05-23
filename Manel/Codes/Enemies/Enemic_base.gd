@@ -2,6 +2,7 @@ extends KinematicBody2D
 
 onready var BULLET_SCENE = preload("res://Manel/Scenes/Bullets/Bullet_base.tscn")
 
+
 var health = 300
 var vel = 1.5
 var move = Vector2.ZERO
@@ -28,6 +29,7 @@ func _physics_process(delta):
 		else:
 			move = position.direction_to(player.position) * vel
 		
+		var mirar_jugador = get_global_position().direction_to(player.position)
 	move = move_and_collide(move)
 
 func _on_Area2D_body_entered(body):
