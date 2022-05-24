@@ -42,7 +42,9 @@ func _physics_process(delta):
 			pass
 		else:
 			move = position.direction_to(player.position) * vel
-		
+			
+		$Animacio.look_at(player.global_position)
+			
 	move = move_and_collide(move)
 	
 	#Coses de minions i tal
@@ -88,6 +90,7 @@ func _physics_process(delta):
 			loop4= 0
 		#Escut
 		if check_m == 0:
+			$Animacio.play('Normal')
 			$Hitbox.minions_morts = true
 
 func _on_Area2D_body_entered(body):

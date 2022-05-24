@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://Manel/Codes/Hitboxes/Hitbox_brutus.gd" type="Script" id=1]
+[ext_resource path="res://Manel/Codes/Hitboxes/Hitbox_base.gd" type="Script" id=1]
 [ext_resource path="res://Manel/Codes/Enemies/Enemic_mal.gd" type="Script" id=2]
-[ext_resource path="res://Manel/Assets/strenght.webp" type="Texture" id=3]
+[ext_resource path="res://Manel/Assets/Tanks/tank_mal.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -12,14 +12,16 @@ radius = 1886.92
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 11, 11 )
 
-[node name="Enemic_mal" type="KinematicBody2D" groups=["enemie"]]
+[node name="Enemic_mal" type="KinematicBody2D"]
+scale = Vector2( 2, 2 )
 script = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
-scale = Vector2( 0.111111, 0.111111 )
+position = Vector2( 2.38419e-07, -5.90863e-07 )
+scale = Vector2( 0.434783, 0.434783 )
 texture = ExtResource( 3 )
 
 [node name="Area2D" type="Area2D" parent="."]
