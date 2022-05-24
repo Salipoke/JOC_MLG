@@ -60,6 +60,7 @@ position = Vector2( 512, 300 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
+volume_db = -10.0
 autoplay = true
 
 [node name="Movimiento" parent="." instance=ExtResource( 7 )]
@@ -73,3 +74,5 @@ position = Vector2( 519, 469 )
 
 [node name="Enemic_base3" parent="." instance=ExtResource( 9 )]
 position = Vector2( 932, 301 )
+
+[connection signal="ready" from="AudioStreamPlayer" to="." method="_on_AudioStreamPlayer_ready"]

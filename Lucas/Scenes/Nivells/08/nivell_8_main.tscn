@@ -21,10 +21,6 @@ texture = ExtResource( 3 )
 [node name="Bales" type="Node2D" parent="."]
 script = ExtResource( 4 )
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 5 )
-autoplay = true
-
 [node name="Movimiento" parent="." instance=ExtResource( 6 )]
 position = Vector2( 503, 298 )
 
@@ -36,3 +32,8 @@ position = Vector2( 64, 76 )
 
 [node name="Enemic_3bales2" parent="." instance=ExtResource( 7 )]
 position = Vector2( 958, 112 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+volume_db = -10.0
+autoplay = true

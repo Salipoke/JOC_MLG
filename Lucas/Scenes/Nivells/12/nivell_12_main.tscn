@@ -57,10 +57,6 @@ position = Vector2( 500, 418 )
 [node name="Bales" type="Node2D" parent="."]
 script = ExtResource( 8 )
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 9 )
-autoplay = true
-
 [node name="Movimiento" parent="." instance=ExtResource( 7 )]
 position = Vector2( 512, 500 )
 
@@ -78,3 +74,8 @@ position = Vector2( 256, 370 )
 
 [node name="Enemic_base4" parent="." instance=ExtResource( 11 )]
 position = Vector2( 729, 361 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 9 )
+volume_db = -10.0
+autoplay = true

@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://Lucas/Scripts/UI/level_selector/level_sel.gd" type="Script" id=1]
 [ext_resource path="res://Lucas/Sprites/lvl_selection/15.PNG" type="Texture" id=2]
@@ -20,10 +20,18 @@
 [ext_resource path="res://Lucas/Sprites/lvl_selection/boss_02.PNG" type="Texture" id=18]
 [ext_resource path="res://Lucas/Sprites/lvl_selection/boss_03.PNG" type="Texture" id=19]
 [ext_resource path="res://Lucas/sounds/temp.wav" type="AudioStream" id=20]
+[ext_resource path="res://Lucas/Sprites/back_selection.ogv" type="VideoStream" id=21]
 
 [node name="level_sel" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+
+[node name="VideoPlayer" type="VideoPlayer" parent="."]
+margin_right = 1024.0
+margin_bottom = 603.0
+stream = ExtResource( 21 )
+volume_db = -80.0
+autoplay = true
 
 [node name="Label" type="Label" parent="."]
 margin_left = 512.0

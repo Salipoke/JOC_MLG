@@ -64,16 +64,11 @@ position = Vector2( 831, 151 )
 [node name="Bales" type="Node2D" parent="."]
 script = ExtResource( 7 )
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 8 )
-autoplay = true
-
 [node name="Movimiento" parent="." instance=ExtResource( 5 )]
 position = Vector2( 823, 65 )
 
 [node name="Enemic_mal" parent="." instance=ExtResource( 9 )]
 position = Vector2( 871, 445 )
-scale = Vector2( 2, 2 )
 
 [node name="Enemic_velocitat" parent="." instance=ExtResource( 11 )]
 position = Vector2( 410, 179 )
@@ -81,3 +76,8 @@ scale = Vector2( 4, 4 )
 
 [node name="Enemic_triple" parent="." instance=ExtResource( 10 )]
 position = Vector2( 150, 401 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+volume_db = -10.0
+autoplay = true

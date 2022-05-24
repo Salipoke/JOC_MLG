@@ -73,10 +73,6 @@ position = Vector2( 511, 409 )
 scale = Vector2( 0.472222, 0.472222 )
 texture = ExtResource( 9 )
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 10 )
-autoplay = true
-
 [node name="Movimiento" parent="." instance=ExtResource( 3 )]
 position = Vector2( 512, 60 )
 
@@ -88,3 +84,8 @@ position = Vector2( 386, 302 )
 
 [node name="Enemic_vida3" parent="." instance=ExtResource( 11 )]
 position = Vector2( 651, 306 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )
+volume_db = -10.0
+autoplay = true

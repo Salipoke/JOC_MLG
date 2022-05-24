@@ -10,8 +10,6 @@
 [sub_resource type="GDScript" id=2]
 script/source = "extends Node
 #DESDE LA PESTANYA D'OPCIONS, SI PREMS ESC, VA AL MENU
-
-
 "
 
 [sub_resource type="Theme" id=3]
@@ -51,6 +49,7 @@ stream = ExtResource( 5 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="FULLSCREEN"]
 stream = ExtResource( 1 )
+volume_db = -10.0
 autoplay = true
 
 [node name="FPS" type="Label" parent="."]
@@ -98,6 +97,7 @@ margin_top = 503.0
 margin_right = 151.324
 margin_bottom = 563.251
 
+[connection signal="finished" from="FULLSCREEN/AudioStreamPlayer" to="FULLSCREEN" method="_on_AudioStreamPlayer_finished"]
 [connection signal="changed" from="FPS/HScrollBar" to="FPS" method="_on_HScrollBar_changed"]
 [connection signal="scrolling" from="FPS/HScrollBar" to="FPS" method="_on_HScrollBar_scrolling"]
 [connection signal="button_down" from="CheckButton" to="FULLSCREEN" method="_on_CheckButton_button_down"]

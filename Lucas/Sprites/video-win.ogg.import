@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/video-win.ogg-babecdcaf08b6b464aae9130451f9b4b.oggstr"
+
+[deps]
+
+source_file="res://Lucas/Sprites/video-win.ogg"
+dest_files=[ "res://.import/video-win.ogg-babecdcaf08b6b464aae9130451f9b4b.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

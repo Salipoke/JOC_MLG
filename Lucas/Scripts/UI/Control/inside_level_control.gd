@@ -7,3 +7,5 @@ func _input(event:InputEvent):
 func _process(delta):
 	if get_tree().get_nodes_in_group("enemie").size() == 0:
 		print('a')
+	if get_tree().get_nodes_in_group("enemie").empty():
+		get_tree().change_scene("res://Lucas/Scenes/Nivells/level_selector/level_sel_screen.tscn")
