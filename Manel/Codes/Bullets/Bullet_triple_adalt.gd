@@ -16,6 +16,10 @@ func _physics_process(delta):
 	move = move.normalized() * vel
 	position.y += -cos(move.y)
 	position.x += move.x
+	
+	for i in get_overlapping_areas():
+		if i.is_in_group('walls'):
+			queue_free()
 
 func _on_Visibility_R_screen_exited():
 	queue_free()

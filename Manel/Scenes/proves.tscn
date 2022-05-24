@@ -1,9 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Guillem/Scripts/Bales.gd" type="Script" id=1]
 [ext_resource path="res://Guillem/Scenes/Personatge.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Manel/Scenes/Bosses/Boss 3 (Minions).tscn" type="PackedScene" id=4]
-[ext_resource path="res://Manel/Scenes/Bosses/Boss 2 (Brutus).tscn" type="PackedScene" id=7]
+[ext_resource path="res://Manel/Scenes/Enemies/Enemic_base.tscn" type="PackedScene" id=9]
 
 [node name="proves" type="Node2D"]
 
@@ -13,8 +12,5 @@ position = Vector2( 76, 306 )
 [node name="Bales" type="Node2D" parent="."]
 script = ExtResource( 1 )
 
-[node name="Boss 2 (Brutus)" parent="." instance=ExtResource( 7 )]
-position = Vector2( 659, 297 )
-
-[node name="Boss 3 (Minions)" parent="." instance=ExtResource( 4 )]
-position = Vector2( 638, 489 )
+[node name="Enemic_base" parent="." instance=ExtResource( 9 )]
+position = Vector2( 499, 356 )
