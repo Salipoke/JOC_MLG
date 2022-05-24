@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Sprite endevant1.png-d8928be2519768ba9543bfcf6f45fd37.stex"
+path="res://.import/Bala_enemic.png-59078e423eb37d53c64ae477cadc5d39.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Guillem/Images/Personales/Tank/Sprites/Moviment tanque principal/Sprite endevant1.png"
-dest_files=[ "res://.import/Sprite endevant1.png-d8928be2519768ba9543bfcf6f45fd37.stex" ]
+source_file="res://Guillem/Images/Personales/Tank/Imatges/Bala enemic/Bala_enemic.png"
+dest_files=[ "res://.import/Bala_enemic.png-59078e423eb37d53c64ae477cadc5d39.stex" ]
 
 [params]
 

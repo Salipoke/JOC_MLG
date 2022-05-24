@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Sprite endevant2.png-2d0805bc61b3a5eb32486bc5103c30d2.stex"
+path="res://.import/Sprite endevant2.png-2acdaa5950e992797c14057a413f65ba.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Guillem/Images/Personales/Tank/Sprite endevant2.png"
-dest_files=[ "res://.import/Sprite endevant2.png-2d0805bc61b3a5eb32486bc5103c30d2.stex" ]
+source_file="res://Guillem/Images/Personales/Tank/Sprites/Moviment tanque principal/Sprite endevant2.png"
+dest_files=[ "res://.import/Sprite endevant2.png-2acdaa5950e992797c14057a413f65ba.stex" ]
 
 [params]
 
