@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/temp.wav-61313eceaabf2a5ea5ed1fec2264277a.sample"
+
+[deps]
+
+source_file="res://Lucas/sounds/temp.wav"
+dest_files=[ "res://.import/temp.wav-61313eceaabf2a5ea5ed1fec2264277a.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

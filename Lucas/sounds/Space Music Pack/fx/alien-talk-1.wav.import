@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/alien-talk-1.wav-5e67c308eeb82eac30483ac8ca83eb18.sample"
+
+[deps]
+
+source_file="res://Lucas/sounds/Space Music Pack/fx/alien-talk-1.wav"
+dest_files=[ "res://.import/alien-talk-1.wav-5e67c308eeb82eac30483ac8ca83eb18.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

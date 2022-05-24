@@ -1,4 +1,4 @@
-extends Sprite
+extends ColorRect
 
 
 # Declare member variables here. Examples:
@@ -11,6 +11,6 @@ var vel = 100
 
 
 func _process(delta):
-	position.x += vel*delta
-	if position.x >= 1000 or position.x <= 200:
+	rect_position.x += vel*delta
+	if rect_position.x >= 924 or rect_position.x <= 100:
 		vel = -vel

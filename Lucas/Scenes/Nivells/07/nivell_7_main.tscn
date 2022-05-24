@@ -1,15 +1,18 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Lucas/Scenes/Nivells/obj/ext_walls.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Lucas/Scenes/Nivells/obj/small_3.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Lucas/Scripts/UI/Control/inside_level_control.gd" type="Script" id=3]
-[ext_resource path="res://Guillem/Personatge.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Guillem/Scenes/Personatge.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Guillem/Scripts/Bales.gd" type="Script" id=5]
 [ext_resource path="res://Lucas/Sprites/wals/lvl_7_exp.png" type="Texture" id=6]
+[ext_resource path="res://Lucas/sounds/music_sounds/mountain-trials.ogg" type="AudioStream" id=7]
+[ext_resource path="res://Manel/Scenes/Enemies/Enemic_velocitat.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Manel/Scenes/Enemies/Enemic_mal.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Manel/Scenes/Enemies/Enemic_base.tscn" type="PackedScene" id=10]
 
 [sub_resource type="StreamTexture" id=1]
-flags = 4
-load_path = "res://.import/back.png-04b362e782009479833f34638a0ab7c6.stex"
+load_path = "res://.import/back.png-10b679116464f5e9ece7d69abd6aedda.stex"
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 3 )
@@ -67,9 +70,6 @@ position = Vector2( 0, 30 )
 [node name="wall_1" parent="walls/wall_1/wall_1/wall_1/wall_1/wall_1/wall_1" instance=ExtResource( 2 )]
 position = Vector2( 0, 30 )
 
-[node name="Movimiento" parent="." instance=ExtResource( 4 )]
-position = Vector2( 517, 297 )
-
 [node name="Bales" type="Node2D" parent="."]
 script = ExtResource( 5 )
 
@@ -82,3 +82,25 @@ texture = ExtResource( 6 )
 position = Vector2( 734, 299.5 )
 scale = Vector2( 0.422311, 0.349582 )
 texture = ExtResource( 6 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+autoplay = true
+
+[node name="Movimiento" parent="." instance=ExtResource( 4 )]
+position = Vector2( 512, 300 )
+
+[node name="Enemic_velocitat" parent="." instance=ExtResource( 8 )]
+position = Vector2( 911, 321 )
+
+[node name="Enemic_velocitat2" parent="." instance=ExtResource( 8 )]
+position = Vector2( 95, 310 )
+
+[node name="Enemic_mal" parent="." instance=ExtResource( 9 )]
+position = Vector2( 513, 85 )
+
+[node name="Enemic_base" parent="." instance=ExtResource( 10 )]
+position = Vector2( 73, 510 )
+
+[node name="Enemic_base2" parent="." instance=ExtResource( 10 )]
+position = Vector2( 935, 521 )
