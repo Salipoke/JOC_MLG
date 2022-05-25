@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://Lucas/sounds/options.wav" type="AudioStream" id=1]
 [ext_resource path="res://Lucas/themes/kenneyUI.tres" type="Theme" id=2]
@@ -20,6 +20,7 @@
 [ext_resource path="res://Manel/Assets/Tanks/tank_boss2_shield.png" type="Texture" id=18]
 [ext_resource path="res://Manel/Assets/Tanks/tank_base.png" type="Texture" id=19]
 [ext_resource path="res://Manel/Assets/Bullets/Bullet_3mal.png" type="Texture" id=20]
+[ext_resource path="res://Lucas/Sprites/maybe.ogv" type="VideoStream" id=21]
 
 [sub_resource type="GDScript" id=2]
 script/source = "extends Node
@@ -33,6 +34,12 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 theme = ExtResource( 2 )
 script = SubResource( 2 )
+
+[node name="VideoPlayer" type="VideoPlayer" parent="."]
+margin_right = 1024.0
+margin_bottom = 602.0
+stream = ExtResource( 21 )
+autoplay = true
 
 [node name="basedmg" type="RichTextLabel" parent="."]
 margin_left = 9.0
