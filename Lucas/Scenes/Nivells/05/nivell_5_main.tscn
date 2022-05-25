@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=2]
 
-[ext_resource path="res://Guillem/Scenes/Personatge.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Guillem/Personatge.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Lucas/Scenes/Nivells/obj/ext_walls.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Lucas/Scenes/Nivells/obj/small_2.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Lucas/Scenes/Nivells/obj/big.tscn" type="PackedScene" id=4]
@@ -85,9 +85,6 @@ position = Vector2( 512, 300 )
 scale = Vector2( 0.416667, 0.434029 )
 texture = ExtResource( 9 )
 
-[node name="Movimiento" parent="." instance=ExtResource( 1 )]
-position = Vector2( 100, 300 )
-
 [node name="Enemic_base2" parent="." instance=ExtResource( 11 )]
 position = Vector2( 624, 240 )
 
@@ -107,3 +104,6 @@ position = Vector2( 816, 308 )
 stream = ExtResource( 10 )
 volume_db = -10.0
 autoplay = true
+
+[node name="Movimiento" parent="." instance=ExtResource( 1 )]
+position = Vector2( 113, 298 )

@@ -5,7 +5,7 @@
 [ext_resource path="res://Lucas/Scenes/Nivells/obj/small_1.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Lucas/Scenes/Nivells/obj/small_2.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Lucas/Scripts/UI/Control/inside_level_control.gd" type="Script" id=5]
-[ext_resource path="res://Guillem/Scenes/Personatge.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Guillem/Personatge.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Guillem/Scripts/Bales.gd" type="Script" id=7]
 [ext_resource path="res://Lucas/Sprites/background/boss_back.png" type="Texture" id=8]
 [ext_resource path="res://Manel/Scenes/Bosses/Boss 3 (Minions).tscn" type="PackedScene" id=9]
@@ -57,12 +57,12 @@ position = Vector2( 860, 451 )
 position = Vector2( 824, 525 )
 rotation = 1.5708
 
-[node name="Movimiento" parent="." instance=ExtResource( 6 )]
-position = Vector2( 177, 288 )
-
 [node name="Boss 3 (Minions)" parent="." instance=ExtResource( 9 )]
 position = Vector2( 706, 289 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 10 )
 autoplay = true
+
+[node name="Movimiento" parent="." instance=ExtResource( 6 )]
+position = Vector2( 89, 280 )

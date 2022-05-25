@@ -5,7 +5,7 @@
 [ext_resource path="res://Lucas/Sprites/background/back.png" type="Texture" id=3]
 [ext_resource path="res://Guillem/Scripts/Bales.gd" type="Script" id=4]
 [ext_resource path="res://Lucas/sounds/music_sounds/mountain-trials.ogg" type="AudioStream" id=5]
-[ext_resource path="res://Guillem/Scenes/Personatge.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Guillem/Personatge.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Manel/Scenes/Enemies/Enemic_3bales.tscn" type="PackedScene" id=7]
 
 [node name="Node2D" type="Node2D"]
@@ -21,9 +21,6 @@ texture = ExtResource( 3 )
 [node name="Bales" type="Node2D" parent="."]
 script = ExtResource( 4 )
 
-[node name="Movimiento" parent="." instance=ExtResource( 6 )]
-position = Vector2( 503, 298 )
-
 [node name="Enemic_3bales4" parent="." instance=ExtResource( 7 )]
 position = Vector2( 515, 540 )
 
@@ -37,3 +34,6 @@ position = Vector2( 958, 112 )
 stream = ExtResource( 5 )
 volume_db = -10.0
 autoplay = true
+
+[node name="Movimiento" parent="." instance=ExtResource( 6 )]
+position = Vector2( 497, 288 )

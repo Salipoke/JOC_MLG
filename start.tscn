@@ -84,4 +84,3 @@ stream = ExtResource( 3 )
 [connection signal="pressed" from="VBoxContainer/ExitButton" to="." method="_on_ExitButton_pressed"]
 [connection signal="finished" from="AudioStreamPlayer2" to="." method="_on_AudioStreamPlayer2_finished"]
 [connection signal="finished" from="AudioStreamPlayer" to="." method="_on_AudioStreamPlayer_finished"]
-[connection signal="ready" from="AudioStreamPlayer" to="." method="_on_AudioStreamPlayer_ready"]
