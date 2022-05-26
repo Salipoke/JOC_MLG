@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Manel/Codes/Hitboxes/Hitbox_brutus.gd" type="Script" id=1]
 [ext_resource path="res://Manel/Assets/Tanks/tank_boss2.png" type="Texture" id=2]
 [ext_resource path="res://Manel/Codes/Enemies/Boss 2 (Brutus).gd" type="Script" id=3]
 [ext_resource path="res://Manel/Assets/Tanks/tank_boss2_shield.png" type="Texture" id=4]
+[ext_resource path="res://Manel/Assets/Sounds/Shoot.mp3" type="AudioStream" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -26,7 +27,7 @@ radius = 1886.92
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 7.11111, 7.11111 )
 
-[node name="Boss 2 (Brutus)" type="KinematicBody2D"]
+[node name="Boss 2 (Brutus)" type="KinematicBody2D" groups=["enemie"]]
 scale = Vector2( 2.5, 2.5 )
 script = ExtResource( 3 )
 
@@ -69,6 +70,9 @@ one_shot = true
 [node name="Timer" type="Timer" parent="."]
 wait_time = 1.75
 autostart = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." groups=["Enemie"]]
+stream = ExtResource( 5 )
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 [connection signal="timeout" from="Hitbox/Shield" to="Hitbox" method="_on_Shield_timeout"]

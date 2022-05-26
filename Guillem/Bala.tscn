@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Guillem/Images/Tank/Bullet.png" type="Texture" id=1]
+[ext_resource path="res://Guillem/Images/Personales/Tank/Imatges/Bala principal/Bala_personatge.png" type="Texture" id=1]
 [ext_resource path="res://Guillem/Scripts/Bala.gd" type="Script" id=2]
 [ext_resource path="res://Guillem/Scenes/Trail.tscn" type="PackedScene" id=3]
 

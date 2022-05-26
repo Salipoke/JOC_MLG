@@ -30,6 +30,7 @@ func _input(event:InputEvent):
 
 
 func _ready():
+	OS.vsync_enabled = true
 	for i in range(1,16):
 		if i > 9:
 			lvl_i = ('res://Lucas/Scenes/Nivells/{i}/nivell_{i}_main.tscn')

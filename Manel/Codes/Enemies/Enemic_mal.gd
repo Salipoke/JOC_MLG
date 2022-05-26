@@ -45,4 +45,5 @@ func fire():
 
 func _on_Timer_timeout():
 	if player != null:
+		$AudioStreamPlayer.play()
 		fire()

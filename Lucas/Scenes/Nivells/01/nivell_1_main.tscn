@@ -6,7 +6,7 @@
 [ext_resource path="res://Lucas/sounds/music_sounds/mountain-trials.ogg" type="AudioStream" id=4]
 [ext_resource path="res://Lucas/Scenes/Nivells/obj/big.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Lucas/Scripts/UI/Control/inside_level_control.gd" type="Script" id=6]
-[ext_resource path="res://Guillem/Scenes/Personatge.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Guillem/Personatge.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Guillem/Scripts/Bales.gd" type="Script" id=8]
 [ext_resource path="res://Manel/Scenes/Enemies/Enemic_base.tscn" type="PackedScene" id=9]
 
@@ -60,10 +60,11 @@ position = Vector2( 512, 300 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
+volume_db = -10.0
 autoplay = true
 
 [node name="Movimiento" parent="." instance=ExtResource( 7 )]
-position = Vector2( 93, 290 )
+position = Vector2( 96, 293 )
 
 [node name="Enemic_base" parent="." instance=ExtResource( 9 )]
 position = Vector2( 519, 155 )
@@ -73,3 +74,5 @@ position = Vector2( 519, 469 )
 
 [node name="Enemic_base3" parent="." instance=ExtResource( 9 )]
 position = Vector2( 932, 301 )
+
+[connection signal="ready" from="AudioStreamPlayer" to="." method="_on_AudioStreamPlayer_ready"]

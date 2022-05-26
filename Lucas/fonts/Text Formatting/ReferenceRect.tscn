@@ -1,0 +1,97 @@
+[gd_scene load_steps=21 format=2]
+
+[ext_resource path="res://Lucas/fonts/Text Formatting/SpriteText.gd" type="Script" id=1]
+[ext_resource path="res://Lucas/fonts/Text Formatting/F_Barre.png" type="Texture" id=2]
+[ext_resource path="res://Lucas/fonts/Text Formatting/FontModule.gd" type="Script" id=3]
+[ext_resource path="res://Lucas/fonts/Text Formatting/Font Normal.png" type="Texture" id=4]
+[ext_resource path="res://Lucas/fonts/Text Formatting/F_Italic.png" type="Texture" id=5]
+[ext_resource path="res://Lucas/fonts/Text Formatting/F_Maxi.png" type="Texture" id=6]
+[ext_resource path="res://Lucas/fonts/Text Formatting/F_Mini.png" type="Texture" id=7]
+[ext_resource path="res://Lucas/fonts/Text Formatting/F_Scribbles.png" type="Texture" id=8]
+[ext_resource path="res://Lucas/fonts/Text Formatting/F_Sousligne.png" type="Texture" id=9]
+[ext_resource path="res://Lucas/fonts/Text Formatting/F_Surligne.png" type="Texture" id=10]
+
+[sub_resource type="Resource" id=11]
+script = ExtResource( 3 )
+font = ExtResource( 2 )
+char_width = 8
+char_height = 18
+
+[sub_resource type="Resource" id=12]
+script = ExtResource( 3 )
+font = ExtResource( 4 )
+char_width = 8
+char_height = 18
+
+[sub_resource type="Resource" id=3]
+script = ExtResource( 3 )
+font = ExtResource( 4 )
+char_width = 8
+char_height = 18
+
+[sub_resource type="Resource" id=4]
+script = ExtResource( 3 )
+font = ExtResource( 5 )
+char_width = 10
+char_height = 18
+
+[sub_resource type="Resource" id=5]
+script = ExtResource( 3 )
+font = ExtResource( 6 )
+char_width = 16
+char_height = 36
+
+[sub_resource type="Resource" id=6]
+script = ExtResource( 3 )
+font = ExtResource( 7 )
+char_width = 5
+char_height = 12
+
+[sub_resource type="Resource" id=7]
+script = ExtResource( 3 )
+font = ExtResource( 4 )
+char_width = 8
+char_height = 18
+
+[sub_resource type="Resource" id=8]
+script = ExtResource( 3 )
+font = ExtResource( 8 )
+char_width = 8
+char_height = 18
+
+[sub_resource type="Resource" id=9]
+script = ExtResource( 3 )
+font = ExtResource( 9 )
+char_width = 8
+char_height = 18
+
+[sub_resource type="Resource" id=10]
+script = ExtResource( 3 )
+font = ExtResource( 10 )
+char_width = 8
+char_height = 18
+
+[node name="ReferenceRect" type="ReferenceRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 273.0
+margin_top = 128.0
+margin_right = -239.0
+margin_bottom = -427.0
+border_color = Color( 1, 1, 1, 0 )
+script = ExtResource( 1 )
+text = "#W #C13 bruh"
+character_set = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ àâèéêëîïôûùç\\'\"¬.;:,?!&(){}[]<>/-_°€+*=1234567890"
+fonts = {
+"Barre": SubResource( 11 ),
+"Gibberish": SubResource( 12 ),
+"Glitch": SubResource( 3 ),
+"Italic": SubResource( 4 ),
+"Maxi": SubResource( 5 ),
+"Mini": SubResource( 6 ),
+"Normal": SubResource( 7 ),
+"Scribbles": SubResource( 8 ),
+"Sousligne": SubResource( 9 ),
+"Surligne": SubResource( 10 )
+}
+curr_font = ExtResource( 4 )

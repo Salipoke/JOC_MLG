@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://Lucas/sounds/options.wav" type="AudioStream" id=1]
 [ext_resource path="res://Lucas/themes/kenneyUI.tres" type="Theme" id=2]
@@ -6,12 +6,25 @@
 [ext_resource path="res://Lucas/Scripts/UI/label/FPS.gd" type="Script" id=4]
 [ext_resource path="res://Lucas/sounds/music_sounds/attack.wav" type="AudioStream" id=5]
 [ext_resource path="res://Lucas/Scripts/UI/test_scr/Sprite_move.gd" type="Script" id=6]
+[ext_resource path="res://Manel/Assets/Tanks/tank_triple.png" type="Texture" id=7]
+[ext_resource path="res://Manel/Assets/Tanks/tank_mal.png" type="Texture" id=8]
+[ext_resource path="res://Manel/Assets/Tanks/tank_minion.png" type="Texture" id=9]
+[ext_resource path="res://Manel/Assets/Bullets/Bullet_1mal.png" type="Texture" id=10]
+[ext_resource path="res://Manel/Assets/Bullets/Bullet_2mal.png" type="Texture" id=11]
+[ext_resource path="res://Manel/Assets/Tanks/tank_boss3.png" type="Texture" id=12]
+[ext_resource path="res://Manel/Assets/Tanks/tank_3bales.png" type="Texture" id=13]
+[ext_resource path="res://Manel/Assets/Tanks/tank_vida.png" type="Texture" id=14]
+[ext_resource path="res://Manel/Assets/Tanks/tank_boss2.png" type="Texture" id=15]
+[ext_resource path="res://Manel/Assets/Tanks/tank_velocitat.png" type="Texture" id=16]
+[ext_resource path="res://Manel/Assets/Tanks/tank_boss1.png" type="Texture" id=17]
+[ext_resource path="res://Manel/Assets/Tanks/tank_boss2_shield.png" type="Texture" id=18]
+[ext_resource path="res://Manel/Assets/Tanks/tank_base.png" type="Texture" id=19]
+[ext_resource path="res://Manel/Assets/Bullets/Bullet_3mal.png" type="Texture" id=20]
+[ext_resource path="res://Lucas/Sprites/maybe.ogv" type="VideoStream" id=21]
 
 [sub_resource type="GDScript" id=2]
 script/source = "extends Node
 #DESDE LA PESTANYA D'OPCIONS, SI PREMS ESC, VA AL MENU
-
-
 "
 
 [sub_resource type="Theme" id=3]
@@ -21,6 +34,65 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 theme = ExtResource( 2 )
 script = SubResource( 2 )
+
+[node name="VideoPlayer" type="VideoPlayer" parent="."]
+margin_right = 1024.0
+margin_bottom = 602.0
+stream = ExtResource( 21 )
+autoplay = true
+
+[node name="basedmg" type="RichTextLabel" parent="."]
+margin_left = 9.0
+margin_top = 374.0
+margin_right = 175.0
+margin_bottom = 590.0
+text = "Enemic base       
+
+
+
+
+
+enemic +dmg"
+
+[node name="velhp" type="RichTextLabel" parent="."]
+margin_left = 213.0
+margin_top = 374.0
+margin_right = 451.0
+margin_bottom = 589.0
+text = "ENEMIC +VEL
+
+
+
+
+
+ENEMIC +HP"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+margin_left = 371.0
+margin_top = 374.0
+margin_right = 542.0
+margin_bottom = 592.0
+text = "ENEMIC TRIPLE
+
+
+
+
+
+ENEMIC 3 BALES"
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="."]
+margin_left = 594.0
+margin_top = 374.0
+margin_right = 984.0
+margin_bottom = 593.0
+text = "BOSS 1                                  BOSS 2
+
+
+
+
+
+BOSS 3
+"
 
 [node name="Icon" type="ColorRect" parent="."]
 margin_left = 487.0
@@ -51,6 +123,7 @@ stream = ExtResource( 5 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="FULLSCREEN"]
 stream = ExtResource( 1 )
+volume_db = -10.0
 autoplay = true
 
 [node name="FPS" type="Label" parent="."]
@@ -77,7 +150,7 @@ custom_step = 10.0
 margin_left = 4.0
 margin_top = 4.0
 margin_right = 409.0
-margin_bottom = 601.0
+margin_bottom = 242.0
 theme = ExtResource( 2 )
 text = "							CONTROLS:
 W - MOURE'S ENDAVANT
@@ -98,6 +171,139 @@ margin_top = 503.0
 margin_right = 151.324
 margin_bottom = 563.251
 
+[node name="TankBase" type="Sprite" parent="."]
+position = Vector2( 77, 433 )
+texture = ExtResource( 19 )
+
+[node name="TankBoss1" type="Sprite" parent="."]
+position = Vector2( 623, 439 )
+texture = ExtResource( 17 )
+
+[node name="Tank3Bales" type="Sprite" parent="."]
+position = Vector2( 424, 551 )
+texture = ExtResource( 13 )
+
+[node name="TankVida" type="Sprite" parent="."]
+position = Vector2( 273, 546 )
+texture = ExtResource( 14 )
+
+[node name="TankBoss2" type="Sprite" parent="."]
+position = Vector2( 608, 545 )
+texture = ExtResource( 15 )
+
+[node name="TankBoss2Shield" type="Sprite" parent="."]
+position = Vector2( 713, 545 )
+texture = ExtResource( 18 )
+
+[node name="TankBoss3" type="Sprite" parent="."]
+position = Vector2( 852, 465 )
+texture = ExtResource( 12 )
+
+[node name="TankMinion" type="Sprite" parent="."]
+position = Vector2( 767, 465 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 9 )
+
+[node name="Bullet1Mal" type="Sprite" parent="TankMinion"]
+position = Vector2( 64, 0 )
+texture = ExtResource( 10 )
+
+[node name="Bullet1Mal2" type="Sprite" parent="TankMinion"]
+position = Vector2( 218, -100 )
+texture = ExtResource( 10 )
+
+[node name="Bullet1Mal3" type="Sprite" parent="TankMinion"]
+position = Vector2( 240, 124 )
+texture = ExtResource( 10 )
+
+[node name="Bullet1Mal4" type="Sprite" parent="TankMinion"]
+position = Vector2( 450, 8 )
+texture = ExtResource( 10 )
+
+[node name="TankMinion2" type="Sprite" parent="."]
+position = Vector2( 967, 466 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 9 )
+
+[node name="TankMinion3" type="Sprite" parent="."]
+position = Vector2( 847, 414 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 9 )
+
+[node name="TankMinion4" type="Sprite" parent="."]
+position = Vector2( 853, 525 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 9 )
+
+[node name="TankVelocitat" type="Sprite" parent="."]
+position = Vector2( 275, 435 )
+texture = ExtResource( 16 )
+
+[node name="TankMal" type="Sprite" parent="."]
+position = Vector2( 81, 549 )
+texture = ExtResource( 8 )
+
+[node name="TankTriple" type="Sprite" parent="."]
+position = Vector2( 412, 430 )
+texture = ExtResource( 7 )
+
+[node name="Bullet2Mal" type="Sprite" parent="."]
+position = Vector2( 135, 549 )
+texture = ExtResource( 11 )
+
+[node name="Bullet1Mal" type="Sprite" parent="."]
+position = Vector2( 131, 437 )
+texture = ExtResource( 10 )
+
+[node name="Bullet1Mal2" type="Sprite" parent="."]
+position = Vector2( 326, 438 )
+texture = ExtResource( 10 )
+
+[node name="Bullet1Mal3" type="Sprite" parent="."]
+position = Vector2( 330, 548 )
+texture = ExtResource( 10 )
+
+[node name="Bullet1Mal4" type="Sprite" parent="."]
+position = Vector2( 471, 551 )
+texture = ExtResource( 10 )
+
+[node name="Bullet1Mal5" type="Sprite" parent="."]
+position = Vector2( 498, 552 )
+texture = ExtResource( 10 )
+
+[node name="Bullet1Mal6" type="Sprite" parent="."]
+position = Vector2( 525, 551 )
+texture = ExtResource( 10 )
+
+[node name="Bullet1Mal7" type="Sprite" parent="."]
+position = Vector2( 464, 410 )
+texture = ExtResource( 10 )
+
+[node name="Bullet1Mal8" type="Sprite" parent="."]
+position = Vector2( 465, 438 )
+texture = ExtResource( 10 )
+
+[node name="Bullet1Mal9" type="Sprite" parent="."]
+position = Vector2( 464, 467 )
+texture = ExtResource( 10 )
+
+[node name="Bullet3Mal" type="Sprite" parent="."]
+position = Vector2( 679, 443 )
+texture = ExtResource( 20 )
+
+[node name="Bullet3Mal2" type="Sprite" parent="."]
+position = Vector2( 657, 546 )
+texture = ExtResource( 20 )
+
+[node name="Bullet3Mal3" type="Sprite" parent="."]
+position = Vector2( 775, 548 )
+texture = ExtResource( 20 )
+
+[node name="Bullet3Mal4" type="Sprite" parent="."]
+position = Vector2( 916, 465 )
+texture = ExtResource( 20 )
+
+[connection signal="finished" from="FULLSCREEN/AudioStreamPlayer" to="FULLSCREEN" method="_on_AudioStreamPlayer_finished"]
 [connection signal="changed" from="FPS/HScrollBar" to="FPS" method="_on_HScrollBar_changed"]
 [connection signal="scrolling" from="FPS/HScrollBar" to="FPS" method="_on_HScrollBar_scrolling"]
 [connection signal="button_down" from="CheckButton" to="FULLSCREEN" method="_on_CheckButton_button_down"]

@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Manel/Codes/Hitboxes/Hitbox_base.gd" type="Script" id=1]
 [ext_resource path="res://Manel/Codes/Enemies/Enemic_mal.gd" type="Script" id=2]
 [ext_resource path="res://Manel/Assets/Tanks/tank_mal.png" type="Texture" id=3]
+[ext_resource path="res://Manel/Assets/Sounds/Shoot.mp3" type="AudioStream" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -12,7 +13,7 @@ radius = 1886.92
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 11, 11 )
 
-[node name="Enemic_mal" type="KinematicBody2D"]
+[node name="Enemic_mal" type="KinematicBody2D" groups=["enemie"]]
 scale = Vector2( 2, 2 )
 script = ExtResource( 2 )
 
@@ -39,6 +40,9 @@ shape = SubResource( 3 )
 [node name="Timer" type="Timer" parent="."]
 wait_time = 1.75
 autostart = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." groups=["Enemie"]]
+stream = ExtResource( 4 )
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

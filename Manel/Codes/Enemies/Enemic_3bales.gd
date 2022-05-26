@@ -28,7 +28,6 @@ func _physics_process(delta):
 			pass
 		else:
 			move = position.direction_to(player.position) * vel
-		
 		$Sprite.look_at(player.global_position)
 		
 	move = move_and_collide(move)
@@ -51,4 +50,5 @@ func fire():
 
 func _on_Timer_timeout():
 	if player != null:
+		$AudioStreamPlayer.play() 
 		fire()

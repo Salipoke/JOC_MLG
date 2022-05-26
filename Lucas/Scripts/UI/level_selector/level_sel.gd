@@ -112,10 +112,7 @@ func _on_Timer2_timeout():
 			$'15'.raise()
 	else:
 		if level_selected_animation == true:
-			modulate = Color (0,1,0)
-			rect_scale = Vector2(1.25,1.25)
+			rect_scale += Vector2(0.1,0.1)
 			level_selected_animation = false
 		else:
-			modulate = Color (1,1,1)
-			rect_scale = Vector2(1,1)
 			level_selected_animation = true

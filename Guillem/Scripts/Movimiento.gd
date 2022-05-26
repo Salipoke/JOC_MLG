@@ -37,7 +37,7 @@ func _physics_process(delta):
 		health -= $Hitbox.damage
 		$Hitbox.health = false
 	if health <= 0:
-		get_tree().change_scene('res://start.tscn')
+		get_tree().change_scene('res://Lucas/Scenes/endings/death.tscn')
 
 func look_at_mouse():
 	var mouse_pos = get_global_mouse_position()
