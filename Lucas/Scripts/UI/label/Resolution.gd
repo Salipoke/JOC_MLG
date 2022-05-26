@@ -38,3 +38,4 @@ func window_resize():
 	if new_size.x > 1024:
 		new_size.x = 1024
 	viewport.set_size_override(true, new_size)
+

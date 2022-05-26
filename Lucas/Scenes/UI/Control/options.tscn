@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://Lucas/sounds/options.wav" type="AudioStream" id=1]
 [ext_resource path="res://Lucas/themes/kenneyUI.tres" type="Theme" id=2]
@@ -20,12 +20,10 @@
 [ext_resource path="res://Manel/Assets/Tanks/tank_boss2_shield.png" type="Texture" id=18]
 [ext_resource path="res://Manel/Assets/Tanks/tank_base.png" type="Texture" id=19]
 [ext_resource path="res://Manel/Assets/Bullets/Bullet_3mal.png" type="Texture" id=20]
-[ext_resource path="res://Lucas/Sprites/maybe.ogv" type="VideoStream" id=21]
+[ext_resource path="res://Lucas/Sprites/maybe.webm" type="VideoStream" id=21]
+[ext_resource path="res://Lucas/Scripts/VideoPlayer_work.gd" type="Script" id=22]
 
 [sub_resource type="GDScript" id=2]
-script/source = "extends Node
-#DESDE LA PESTANYA D'OPCIONS, SI PREMS ESC, VA AL MENU
-"
 
 [sub_resource type="Theme" id=3]
 
@@ -40,6 +38,7 @@ margin_right = 1024.0
 margin_bottom = 602.0
 stream = ExtResource( 21 )
 autoplay = true
+script = ExtResource( 22 )
 
 [node name="basedmg" type="RichTextLabel" parent="."]
 margin_left = 9.0
@@ -95,6 +94,7 @@ BOSS 3
 "
 
 [node name="Icon" type="ColorRect" parent="."]
+visible = false
 margin_left = 487.0
 margin_top = 275.0
 margin_right = 537.0
@@ -103,6 +103,7 @@ rect_pivot_offset = Vector2( 25, 25 )
 script = ExtResource( 6 )
 
 [node name="Icon2" type="ColorRect" parent="Icon"]
+visible = false
 margin_right = 50.0
 margin_bottom = 50.0
 rect_rotation = 45.0
@@ -147,10 +148,10 @@ step = 5.0
 custom_step = 10.0
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
-margin_left = 4.0
-margin_top = 4.0
-margin_right = 409.0
-margin_bottom = 242.0
+margin_left = 17.0
+margin_top = 8.0
+margin_right = 486.0
+margin_bottom = 246.0
 theme = ExtResource( 2 )
 text = "							CONTROLS:
 W - MOURE'S ENDAVANT
@@ -162,7 +163,7 @@ CLICK ESQUERRE - DISPARAR
 
 
 
-ESC - SALTAR INTRODUCCIÓ NIVELL/RETROCEDIR EN MENÚS"
+ESC - SALTAR INTRODUCCIÓ NIVELL  /RETROCEDIR EN MENÚS"
 
 [node name="CheckButton" type="CheckButton" parent="."]
 visible = false
@@ -303,6 +304,7 @@ texture = ExtResource( 20 )
 position = Vector2( 916, 465 )
 texture = ExtResource( 20 )
 
+[connection signal="finished" from="VideoPlayer" to="." method="_on_VideoPlayer_finished"]
 [connection signal="finished" from="FULLSCREEN/AudioStreamPlayer" to="FULLSCREEN" method="_on_AudioStreamPlayer_finished"]
 [connection signal="changed" from="FPS/HScrollBar" to="FPS" method="_on_HScrollBar_changed"]
 [connection signal="scrolling" from="FPS/HScrollBar" to="FPS" method="_on_HScrollBar_scrolling"]
