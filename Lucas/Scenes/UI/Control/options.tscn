@@ -94,7 +94,6 @@ BOSS 3
 "
 
 [node name="Icon" type="ColorRect" parent="."]
-visible = false
 margin_left = 487.0
 margin_top = 275.0
 margin_right = 537.0
@@ -103,7 +102,6 @@ rect_pivot_offset = Vector2( 25, 25 )
 script = ExtResource( 6 )
 
 [node name="Icon2" type="ColorRect" parent="Icon"]
-visible = false
 margin_right = 50.0
 margin_bottom = 50.0
 rect_rotation = 45.0
