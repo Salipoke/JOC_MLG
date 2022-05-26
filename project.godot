@@ -8,6 +8,22 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Resource",
+"class": "FontModule",
+"language": "GDScript",
+"path": "res://Lucas/fonts/Text Formatting/FontModule.gd"
+}, {
+"base": "ReferenceRect",
+"class": "SpriteText",
+"language": "GDScript",
+"path": "res://Lucas/fonts/Text Formatting/SpriteText.gd"
+} ]
+_global_script_class_icons={
+"FontModule": "",
+"SpriteText": ""
+}
+
 [application]
 
 config/name="Joc Final MLG"
@@ -19,6 +35,10 @@ config/icon="res://icon.png"
 Global="*res://global.gd"
 Global_guillem="*res://Guillem/Scripts/Global_guillem.gd"
 
+[debug]
+
+settings/stdout/print_fps=true
+
 [display]
 
 window/vsync/use_vsync=false
@@ -29,6 +49,9 @@ window/stretch/aspect="expand"
 res=false
 resolution=false
 reso=false
+vsync=false
+fps=false
+vs=false
 
 [importer_defaults]
 

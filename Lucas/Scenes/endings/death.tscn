@@ -1,9 +1,78 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://Lucas/sounds/death.mp3" type="AudioStream" id=1]
-[ext_resource path="res://Lucas/Sprites/death/Imagen1.png" type="Texture" id=2]
+[ext_resource path="res://Lucas/fonts/Text Formatting/F_Italic.png" type="Texture" id=2]
 [ext_resource path="res://Lucas/themes/kenneyUI.tres" type="Theme" id=3]
 [ext_resource path="res://Lucas/Scripts/UI/Menu/death.gd" type="Script" id=4]
+[ext_resource path="res://Lucas/fonts/Text Formatting/F_Sousligne.png" type="Texture" id=5]
+[ext_resource path="res://Lucas/fonts/Text Formatting/F_Maxi.png" type="Texture" id=6]
+[ext_resource path="res://Lucas/fonts/Text Formatting/F_Mini.png" type="Texture" id=7]
+[ext_resource path="res://Lucas/fonts/Text Formatting/F_Scribbles.png" type="Texture" id=8]
+[ext_resource path="res://Lucas/fonts/Text Formatting/F_Surligne.png" type="Texture" id=9]
+[ext_resource path="res://Lucas/fonts/Text Formatting/ReferenceRect.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Lucas/fonts/Text Formatting/FontModule.gd" type="Script" id=11]
+[ext_resource path="res://Lucas/fonts/Text Formatting/F_Barre.png" type="Texture" id=12]
+[ext_resource path="res://Lucas/fonts/Text Formatting/Font Normal.png" type="Texture" id=13]
+
+[sub_resource type="Resource" id=11]
+script = ExtResource( 11 )
+font = ExtResource( 12 )
+char_width = 8
+char_height = 18
+
+[sub_resource type="Resource" id=12]
+script = ExtResource( 11 )
+font = ExtResource( 13 )
+char_width = 8
+char_height = 18
+
+[sub_resource type="Resource" id=3]
+script = ExtResource( 11 )
+font = ExtResource( 13 )
+char_width = 8
+char_height = 18
+
+[sub_resource type="Resource" id=4]
+script = ExtResource( 11 )
+font = ExtResource( 2 )
+char_width = 10
+char_height = 18
+
+[sub_resource type="Resource" id=5]
+script = ExtResource( 11 )
+font = ExtResource( 6 )
+char_width = 16
+char_height = 36
+
+[sub_resource type="Resource" id=6]
+script = ExtResource( 11 )
+font = ExtResource( 7 )
+char_width = 5
+char_height = 12
+
+[sub_resource type="Resource" id=7]
+script = ExtResource( 11 )
+font = ExtResource( 13 )
+char_width = 8
+char_height = 18
+
+[sub_resource type="Resource" id=8]
+script = ExtResource( 11 )
+font = ExtResource( 8 )
+char_width = 8
+char_height = 18
+
+[sub_resource type="Resource" id=9]
+script = ExtResource( 11 )
+font = ExtResource( 5 )
+char_width = 8
+char_height = 18
+
+[sub_resource type="Resource" id=10]
+script = ExtResource( 11 )
+font = ExtResource( 9 )
+char_width = 8
+char_height = 18
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
@@ -19,6 +88,27 @@ margin_bottom = -42.0
 rect_scale = Vector2( 26.3957, 16.5525 )
 color = Color( 0, 0, 0, 1 )
 
+[node name="ReferenceRect" parent="." instance=ExtResource( 10 )]
+margin_left = 684.0
+margin_top = 59.0
+margin_right = -296.0
+margin_bottom = -521.0
+rect_scale = Vector2( 15, 10 )
+rect_pivot_offset = Vector2( 33, 0 )
+text = "#S#C4  RIP"
+fonts = {
+"Barre": SubResource( 11 ),
+"Gibberish": SubResource( 12 ),
+"Glitch": SubResource( 3 ),
+"Italic": SubResource( 4 ),
+"Maxi": SubResource( 5 ),
+"Mini": SubResource( 6 ),
+"Normal": SubResource( 7 ),
+"Scribbles": SubResource( 8 ),
+"Sousligne": SubResource( 9 ),
+"Surligne": SubResource( 10 )
+}
+
 [node name="Quit" type="Button" parent="."]
 modulate = Color( 0.352941, 0.160784, 0.160784, 1 )
 margin_left = 427.0
@@ -27,13 +117,6 @@ margin_right = 597.0
 margin_bottom = 350.0
 rect_pivot_offset = Vector2( 85, 25 )
 text = "RENDIR-SE"
-
-[node name="Imagen1" type="Sprite" parent="."]
-modulate = Color( 1, 0, 0, 1 )
-self_modulate = Color( 1, 0, 0, 1 )
-position = Vector2( 512, 100 )
-scale = Vector2( 0.419912, 0.392657 )
-texture = ExtResource( 2 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 1 )

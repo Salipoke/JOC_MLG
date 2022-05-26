@@ -1,10 +1,80 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://Lucas/Scripts/UI/Menu/Menu.gd" type="Script" id=1]
 [ext_resource path="res://Lucas/themes/kenneyUI.tres" type="Theme" id=2]
 [ext_resource path="res://Lucas/sounds/music_sounds/attack.wav" type="AudioStream" id=3]
 [ext_resource path="res://Lucas/sounds/music_sounds/night-chip.ogg" type="AudioStream" id=4]
 [ext_resource path="res://Lucas/Sprites/vid_menu.ogv" type="VideoStream" id=5]
+[ext_resource path="res://Lucas/fonts/Text Formatting/F_Barre.png" type="Texture" id=6]
+[ext_resource path="res://Lucas/fonts/Text Formatting/Font Normal.png" type="Texture" id=7]
+[ext_resource path="res://Lucas/fonts/Text Formatting/F_Mini.png" type="Texture" id=8]
+[ext_resource path="res://Lucas/fonts/Text Formatting/F_Sousligne.png" type="Texture" id=9]
+[ext_resource path="res://Lucas/fonts/Text Formatting/F_Surligne.png" type="Texture" id=10]
+[ext_resource path="res://Lucas/fonts/Text Formatting/F_Italic.png" type="Texture" id=11]
+[ext_resource path="res://Lucas/fonts/Text Formatting/F_Maxi.png" type="Texture" id=12]
+[ext_resource path="res://Lucas/fonts/Text Formatting/F_Scribbles.png" type="Texture" id=13]
+[ext_resource path="res://Lucas/fonts/Text Formatting/ReferenceRect.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Lucas/fonts/Text Formatting/FontModule.gd" type="Script" id=15]
+
+[sub_resource type="Resource" id=11]
+script = ExtResource( 15 )
+font = ExtResource( 6 )
+char_width = 8
+char_height = 18
+
+[sub_resource type="Resource" id=12]
+script = ExtResource( 15 )
+font = ExtResource( 7 )
+char_width = 8
+char_height = 18
+
+[sub_resource type="Resource" id=3]
+script = ExtResource( 15 )
+font = ExtResource( 7 )
+char_width = 8
+char_height = 18
+
+[sub_resource type="Resource" id=4]
+script = ExtResource( 15 )
+font = ExtResource( 11 )
+char_width = 10
+char_height = 18
+
+[sub_resource type="Resource" id=5]
+script = ExtResource( 15 )
+font = ExtResource( 12 )
+char_width = 16
+char_height = 36
+
+[sub_resource type="Resource" id=6]
+script = ExtResource( 15 )
+font = ExtResource( 8 )
+char_width = 5
+char_height = 12
+
+[sub_resource type="Resource" id=7]
+script = ExtResource( 15 )
+font = ExtResource( 7 )
+char_width = 8
+char_height = 18
+
+[sub_resource type="Resource" id=8]
+script = ExtResource( 15 )
+font = ExtResource( 13 )
+char_width = 8
+char_height = 18
+
+[sub_resource type="Resource" id=9]
+script = ExtResource( 15 )
+font = ExtResource( 9 )
+char_width = 8
+char_height = 18
+
+[sub_resource type="Resource" id=10]
+script = ExtResource( 15 )
+font = ExtResource( 10 )
+char_width = 8
+char_height = 18
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 1, 0, 0, 1 )
@@ -50,6 +120,27 @@ margin_right = 1118.0
 margin_bottom = 693.0
 color = Color( 0, 0, 0, 0.290196 )
 
+[node name="ReferenceRect" parent="." instance=ExtResource( 14 )]
+margin_left = 454.0
+margin_top = 53.0
+margin_right = -470.0
+margin_bottom = -508.0
+rect_scale = Vector2( 10, 8 )
+rect_pivot_offset = Vector2( 33, 0 )
+text = "#W#C13  DUNKS"
+fonts = {
+"Barre": SubResource( 11 ),
+"Gibberish": SubResource( 12 ),
+"Glitch": SubResource( 3 ),
+"Italic": SubResource( 4 ),
+"Maxi": SubResource( 5 ),
+"Mini": SubResource( 6 ),
+"Normal": SubResource( 7 ),
+"Scribbles": SubResource( 8 ),
+"Sousligne": SubResource( 9 ),
+"Surligne": SubResource( 10 )
+}
+
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 modulate = Color( 0.807843, 0.807843, 0.807843, 1 )
 anchor_left = 0.5
@@ -60,6 +151,7 @@ margin_left = -146.0
 margin_top = -64.0
 margin_right = 146.0
 margin_bottom = 70.0
+rect_pivot_offset = Vector2( 146, 0 )
 focus_neighbour_top = NodePath("ExitButton")
 focus_neighbour_bottom = NodePath("StartButton")
 focus_mode = 2
