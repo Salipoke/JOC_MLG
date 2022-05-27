@@ -4,7 +4,7 @@
 [ext_resource path="res://Lucas/themes/kenneyUI.tres" type="Theme" id=2]
 [ext_resource path="res://Lucas/sounds/music_sounds/attack.wav" type="AudioStream" id=3]
 [ext_resource path="res://Lucas/sounds/between.mp3" type="AudioStream" id=4]
-[ext_resource path="res://Lucas/Sprites/back_selection.ogv" type="VideoStream" id=5]
+[ext_resource path="res://Lucas/Sprites/maybe.ogv" type="VideoStream" id=5]
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
@@ -14,6 +14,7 @@ anchor_bottom = 1.0
 margin_right = 1024.0
 margin_bottom = 604.0
 stream = ExtResource( 5 )
+autoplay = true
 
 [node name="Menu" type="Control" parent="."]
 anchor_left = 1.0

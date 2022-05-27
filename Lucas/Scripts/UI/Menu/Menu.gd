@@ -1,8 +1,5 @@
 extends Control
 var pret = ''
-
-func _ready():
-	$VBoxContainer/StartButton.grab_focus()
 	
 func _on_StartButton_pressed():
 	$AudioStreamPlayer.play()
